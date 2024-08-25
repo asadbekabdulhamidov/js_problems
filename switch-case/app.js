@@ -95,16 +95,68 @@
 //berilgan(1 - 5 oraliqda) va shu birlikdagi kesma uzunligi
 //berilgan(haqiqiy son).Kesmaning uzunligini metrlarda ifodalofchi programma tuzilsin.
 
-// Case5. Og'irlik birliklari quyidagi tartibda berilgan. 1-kilogramm, 2-milligramm, 3-gramm, 4-tonna, 5- sentner. Og'irlik birligini bildiruvchi soni berilgan va shu birlikdagi og`irlik qiymati berilgan. Og`irlikni kilogramda ifodalofchi programma tuzilsin.
+// let number = 5;
 
-// Case6. Sanani bildiruvchi ikkita butun son berilgan D (kun) va M (oy). (Kabisa bo`lmagan yil sanasi kiritiladi). Berilgan sanani ifodalovchi programma tuzilsin. Kabisa yilida 366 kun, kabisa bo'lmagan yilda 365 kun bor bo'ladi.
+// switch (number) {
+//   case 1:
+//     console.log(`${number / 10} metr`);
+//     break;
+//   case 2:
+//     console.log(`${number * 1000} metr`);
+//     break;
+//   case 3:
+//     console.log(`${number} metr`);
+//     break;
+//   case 4:
+//     console.log(`${number / 1000} metr`);
+//     break;
+//   case 5:
+//     console.log(`${number / 100} metr`);
+//     break;
+//   default:
+//     console.log("no data");
+// }
 
-// Case7. Ikkita butun son berilgan D (kun) va M (oy). (Kabisa bo`lmagan yil sanasi kiritiladi). Berilgan sanadan keyingi sanani ifodalovchi programma tuzilsin.
+//==============================================
 
-// Case8. Robot faqat to`rtta tomonga ko`cha oladi ("s"-shimol, "j"-janub, "q"-sharq, "g"-g'arb) va uchta raqamli kamanda: 0-harakni davom ettir, 1-chapga buril, 2-o`ngga buril. Y - robot yo`nalishi va K - kamanda berilgan. Berilgan kamanda bajarilgandan keying robot holatini aniqlovchi programma tuzilsin.
+// Case5. Og'irlik birliklari quyidagi tartibda berilgan.
+//1 - kilogramm, 2 - milligramm, 3 - gramm, 4 - tonna, 5 - sentner.
+//Og'irlik birligini bildiruvchi soni berilgan va shu birlikdagi og`irlik qiymati berilgan.
+//Og`irlikni kilogramda ifodalofchi programma tuzilsin.
 
-// Case9. O'yin kartasi turlari berilgan 1-g`isht, 2-olma, 3-chillak, 4-qarg`a. 10 lik kartadan katta kartalar quyidagi qiymatlarni o`zlashtirgan: 11-valet, 12-dama, 13-qirol, 14-tuz. Ikkita butun son berilgan N-karta qiymati (6≤ N ≤14), M-karta turi(1≤M ≤4) kiritilganda karta nomlarini (masalan: "olti qarg`a”) chiqarib beruvchi programma tuzilsin.
+// let number = 4;
 
-// Case10. O`quv masalalarini aniqlovchi 10-40 gacha butun son berilgan. Son kiritilganda unga mos so`zlarda ifodalovchi programma tuzilsin. ("yigirmata masala", "o`n uchta masala" va h.k.)
+// switch (number) {
+//   case 1:
+//     console.log(`${number} kg`);
+//     break;
 
-// Case11. 100-999 gacha oraliqdagi sonlarni so'zlarda ifodalovchi programma tuzilsin. (masalan: 123- "bir yuz yigirma uch").
+//   case 2:
+//     console.log(`${number / 10000} kg`);
+//     break;
+//   case 3:
+//     console.log(`${number / 1000} kg`);
+//     break;
+//   case 4:
+//     console.log(`${number * 1000} kg`);
+//     break;
+//   case 4:
+//     console.log(`${number * 100} kg`);
+//     break;
+//   default:
+//     console.log("no data");
+// }
+
+//===================================
+
+//Case8. Robot faqat to`rtta tomonga
+// ko`cha oladi ("s"-shimol, "j"-janub, "q"-sharq, "g"-g'arb)
+// va uchta raqamli kamanda: 0-harakni davom ettir, 1-chapga buril,
+// 2-o`ngga buril.Y - robot yo`nalishi va K - kamanda berilgan.
+// Berilgan kamanda bajarilgandan keying robot holatini aniqlovchi programma tuzilsin.
+
+// Case9. O'yin kartasi turlari berilgan 1-g`isht, 2-olma, 3-chillak,
+// 4 - qarg`a. 10 lik kartadan katta kartalar quyidagi qiymatlarni o`zlashtirgan:
+// 11 - valet, 12 - dama, 13 - qirol, 14 - tuz.Ikkita butun son berilgan N - karta
+// qiymati(6≤ N ≤14), M - karta turi(1≤M ≤4) kiritilganda karta nomlarini(masalan: "olti qarg`a”)
+//     chiqarib beruvchi programma tuzilsin.
