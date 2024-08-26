@@ -345,23 +345,97 @@
 //   }
 // }
 
-// While1. A va B butun musbat sonlari berilgan (A> B). A usunlikdagi kesmada maksimal darajada B kesma joylashtirilgan. A kesmaning bo'sh qismini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
+// karra jadvalini chiqarish
 
-// While2. A va B butun musbat sonlari berilgan (A > B). A usunlikdagi kesmada B kesmadan nechta joylashtirish mumkinligini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish amallarini ishlatmang.
+// for (let i = 2; i <= 9; i++) {
+//   console.log(`${i}-karra jadvali`);
 
-// While3. n butun soni berilgan (n > 0). Agar n soni 3 ning darajasi bo'lsa "3 - ning darajasi", aks xolda "3 - ning darajasi emas” degan natija chiqaruvchi programma tuzilsin. Qoldiqli bo'lish va bo'lish amallarini ishlatmang.
+//   for (let j = 1; j <= 10; j++) {
+//     console.log(`${i}*${j}=${i * j}`);
+//   }
+// }
 
-// While4. n va m butun musbat sonlari berilgan (n > m). n sonini m soniga bo'lib butun va qoldiq qismlarini bo'lish va qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+// While1. A va B butun musbat sonlari berilgan (A> B).
+// A usunlikdagi kesmada maksimal darajada B kesma joylashtirilgan
+//.A kesmaning bo'sh qismini aniqlovchi programma tuzilsin.
+//Ko'paytirish va bo'lish amallarini ishlatmang.
+// let a = 17;
+// let b = 5;
+// let boshQism = a;
+// while (boshQism >= b) {
+//   boshQism -= b;
+// }
 
-// While5. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
+// console.log(boshQism);
 
-// While6. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlari yig'indisini va raqamlari sonini chiqaruvchi programma tuzilsin.
+// While2. A va B butun musbat sonlari berilgan (A > B).
+// A usunlikdagi kesmada B kesmadan nechta joylashtirish mumkinligini
+//aniqlovchi programma tuzilsin.Ko'paytirish va bo'lish amallarini ishlatmang.
 
-// While7. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida 2 raqami bor-yo'qligini aniqlovchi programma tuzilsin.
+// let a = 17;
+// let b = 5;
+// let boshQism = a;
+// let counter = 0;
+// while (boshQism >= b) {
+//   boshQism -= b;
+//   counter++;
+// }
 
-// While8. n butun soni berilgan (n > 0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida toq raqamlar bor-yo'qligini aniqlovchi programma tuzilsin.
+// console.log(counter);
 
-// While9. Palindromik songa tekshirish dasturini yozing. True yoki False qaytarsin.
-// Palindromik son – boshidan va oxiridan o’qilish bir xil bo’lgan son, masalan 1345431, 45788754
+//==========================================
 
-// While10. n butun soni berilgan (n > 1). N sonini tub yoki tub emasligini aniqlovchi programma tuzilsin.
+// While3. n butun soni berilgan (n > 0).
+// Agar n soni 3 ning darajasi bo'lsa "3 - ning darajasi",
+//aks xolda "3 - ning darajasi emas” degan natija chiqaruvchi programma tuzilsin.
+// Qoldiqli bo'lish va bo'lish amallarini ishlatmang.
+
+// let n = 18;
+
+// if (n <= 0) {
+//   console.log("3ning darajasi emas");
+// } else {
+//   let num = 1;
+
+//   while (num < n) {
+//     num *= 3;
+//   }
+
+//   if (num === n) {
+//     console.log("3ning darajasi");
+//   } else console.log("3ning darajasi emas");
+// }
+
+//=================================
+
+// While4. n va m butun musbat sonlari berilgan (n > m).
+//n sonini m soniga bo'lib butun va qoldiq qismlarini bo'lish va
+//qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+
+// let n = 14;
+// let m = 3;
+// let s = 0;
+
+// while (n > m) {
+//   n = n - m;
+// }
+
+// console.log(n);
+
+//============================
+
+// While10. n butun soni berilgan (n > 1).
+// N sonini tub yoki tub emasligini aniqlovchi programma tuzilsin.
+
+// let n = 7;
+
+// let counter = 0;
+// let i = 1;
+// while (i <= n) {
+//   if (n % i == 0) counter++;
+//   i++;
+// }
+
+// if (counter == 2) {
+//   console.log(true);
+// } else console.log(false);
