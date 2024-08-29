@@ -274,3 +274,239 @@
 // let result = pushArr(8);
 
 // console.log(result);
+
+//=============================
+
+// Func1. Tomoni a va b ga teng bo’lgan to’g’ri to’rtburchakning
+//yuzasi va perimetrini hisoblovchi rectangle(a, b) nomli funksiya hosil qiling.QYM
+// Input: rectangle (6, 9)
+// Output: 54, 30
+
+// const rectangle = (a, b) => {
+//   let s = a * b;
+//   let p = (a + b) * 2;
+//   return `${s},${p}`;
+// };
+
+// let result = rectangle(6, 9);
+// console.log(result);
+
+//=========================
+
+// Func2. Tomoni a ga teng bo’lgan teng tomonli
+//uchburchakning yuzasi va perimetrini hisoblovchi triangle(a) nomli funksiya hosil qiling.QYM
+// triangle (6)
+
+// function triangle(a) {
+//   const perimeter = 3 * a;
+
+//   // Yuzasi (formula: S = (sqrt(3) / 4) * a^2)
+//   const area = (Math.sqrt(3) / 4) * Math.pow(a, 2);
+
+//   return {
+//     perimeter: perimeter,
+//     area: area,
+//   };
+// }
+
+// const result = triangle(6);
+// console.log("Perimetr:", result.perimeter);
+// console.log("Yuza:", result.area);
+
+//==========================================
+// Func3.  1 dan n ga sonlar yig’indisini qaytaruvchi sum(n) nomli funksiya hosil qiling. QY
+// const sum = (n) => {
+//   let s = (n * (n + 1)) / 2;
+//   return s;
+// };
+
+// let result = sum(10);
+// console.log(result);
+
+//==============================================
+
+// Func4. isSquare (k) mantiqiy funksiyasini hosil qiling. (k > 0).
+//Agar k biror butun sonning kvadrati bo'lsa - true, aks holda false qiymat qaytarilsin. QY
+// isSquare(10) => false
+// isSquare(25) => true
+
+// const isSquare = (k) => {
+//   for (let i = 1; i <= k; i++) {
+//     if (i ** 2 === k) return true;
+//   }
+
+//   return false;
+// };
+
+// let result = isSquare(20);
+// console.log(result);
+
+//======================================
+
+// Func5. Butun qiymat qaytaruvchi digitCount(k) funksiyasini hosil qiling.
+//(k > 0).Funksiya k ning raqamlari sonini qaytarsin.QY
+// digitCount(8791) => 4
+
+// const digitCount = (k) => {
+//   return k.toString().length;
+// };
+
+// let result = digitCount(1234);
+// console.log(result);
+
+// Func6. n natural sonning raqamlari yig'indisini hisoblovchi getDigitSum(n)
+// nomli funksiya hosil qiling.QY
+// getDigitSum (456) => 15
+
+// const getDigitSum = (n) => {
+//   let arr = n.toString().split("").map(Number);
+//   let count = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     count += arr[i];
+//   }
+//   return count;
+// };
+// let result = getDigitSum(456);
+
+// console.log(result);
+
+//====================================
+
+// 21.Fermada turli xildagi hayvonlar mavjud. Shunday funksiya
+// yasangki, ushbu funksiya jami fermadagi hayvonlar oyoqlari
+// nechta ekanligini hisoblab qaytarsin. Bunda funksiya birinchi
+// argument sifatida tovuqlar sonini, ikkinchi argument sifatida
+// qo’ylarni va uchinchi argument sifatida sigirlarning sonini
+// qabul qiladi.
+
+// const oyoqlar = (tovuq, qoy, sigir) => {
+//   let count = tovuq * 2 + sigir * 4 + qoy * 4;
+//   return count;
+// };
+
+// let result = oyoqlar(2, 3, 5);
+// console.log(result);
+
+//========================
+
+// 22.Javascriptda “&&” matiqiy operatori mavjud. Ushbu operator ikkita mantiqiy ifoda qabul qiladi. Quyidagi namunaga
+// muvofiq keladigan funskiya yasang. Ushbu operatordan foydalangan holda!
+// Namuna:
+// and(true, false) ᔍ false
+// and(true, true) ᔍ true
+// and(false, true) ᔍ false
+// and(false, false) ᔍ false
+
+//===========================
+
+// const and = (arg1, arg2) => {
+//   return arg1 && arg2;
+// };
+
+// let result = and(true, true);
+
+// console.log(result);
+
+//=======================================
+
+// 23.Funksiya 2ta son qiymat qabul qiladi. Agar 1-son 2-songa
+// teng bo’lsa rost, aks holda yolg’on qiymat qaytsin. Bunda ikkala
+// qiymatning ma’lumot turi bir xil bo’lsin.
+
+// let tengMi = (num1, num2) => {
+//   return num1 === num2;
+// };
+
+// let result = tengMi(2, 2);
+
+// console.log(result);
+
+//=========================================
+
+// 24.Futbolda ochkoni hisoblaydigan funksiya yasang. Bunda
+// funksiya yutishlar soni, duranglar soni va mag’lubiyatlar sonini
+// qabul qiladi. 1ta yutish = 3 ochko, 1ta durang = 1 ochko, 1ta
+// mag’lubiyat = 0 ochko hisoblanadi.
+
+// const futbolOchko = (yutish, durrang, maglub) => {
+//   let count = yutish * 3 + durrang * 1 + maglub * 0;
+//   return count;
+// };
+
+// let result = futbolOchko(2, 2, 2);
+// console.log(result);
+
+//====================================================
+
+// 25.Funskiya soatlar va minutlarni argument sifatida qabul
+// qiladi. Ushbu funkisya soatlar va minutlarni sekundga o’girib
+// ularning yig’indisini qaytarsin.
+
+// const seconds = (hour, min) => {
+//   let count = hour * 60 * 60 + min * 60;
+//   return count;
+// };
+
+// let result = seconds(1, 3);
+// console.log(result);
+
+//===========================================
+// 27.Funskiay 2ta istalgan turdagi qiymatlar qabul qiladi. Agar
+// ushbu 2ta qiymat ham qiymat jihatidan ham ma’lumot turi
+// jihatidan teng bo’lsa rost, aks holda funkisya yolg’on qiymat
+// qaytarsin
+
+// const tengMi = (data1, data2) => {
+//   return data1 === data2;
+// };
+
+// let result = tengMi("1", "1");
+
+// console.log(result);
+
+//=============================
+
+// 29.Arrow funksiyasini yarating ushbu funksiya shunchaki
+// berilgan qiymatni qaytarsin.
+
+// const arrowFunc = (num) => {
+//   return num;
+// };
+
+// let result = arrowFunc(1);
+// console.log(result);
+//==============================
+// 30.Framelar sonini hisoblaydigan funksiya yarating. Frame bu
+// 1 sekundda necha marta ko’rinishlar soni aylanishi. Funksiya
+// minutlar va 1 sekundda nechta framelar soni aylanishini argument
+//sifatida qabul qiladi.Funksiya jami framelar sonini
+// qaytarsin
+
+// const frameSoni = (minut, frame) => {
+//   let count = minut * 60 * frame;
+//   return count;
+// };
+
+// let result = frameSoni(2, 60);
+// console.log(result);
+
+//==========================================
+// 31.Oddiy matematik amallar ketma-ketligi string ko’rinishida
+// funksiyaga argument sifatida beriladi.
+//Ushbu funksiya matematik ifodani bajarib natijani qaytarsin.
+
+//============================================
+
+// 32.Shunday funksiya yasangki, unda 2ta butun son argument
+// qilib beriladi. Agar ushbu sonlardan birontasi 10ga teng bo’lsa
+// yoki ularning yig’indisi 10ga teng bo’lsa funksiya rost qiymat
+// qaytaradi. Aks hold yolg’on.
+
+// const teng10 = (num1, num2) => {
+//   if (num1 == 10 || num2 == 10 || num1 + num2 == 10) return true;
+//   else return false;
+// };
+
+// let result = teng10(10, 11);
+// console.log(result);
