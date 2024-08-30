@@ -510,3 +510,167 @@
 
 // let result = teng10(10, 11);
 // console.log(result);
+
+//===================================
+// 33.Mashina kilometriga 10litr benzin ichadi. Mashina doim
+// yo’lga chiqishdan oldin kamida 100litr benzin bilan chiqadi.
+// Agar masofa funksiyaga argument sifatida berilsa, ushbu masofaga
+//chiqish uchun Mashina necha litr benzin bilan chiqishi
+// keraglini funksiya qaytarib bersin.
+
+// const litrMasofa = (masofa) => {
+//   let sarf = masofa * 10;
+//   return sarf;
+// };
+
+// let result = litrMasofa(8);
+
+// console.log(result);
+
+//==========================================
+
+// 34.Quyidagi namunaga nazar tashlagan holda funksiya yasang.
+// Namuna:
+// fun(3, 7) ᔍ 7
+// fun(-1, 0) ᔍ 0
+// fun(1000, 400) ᔍ 1000
+
+// const kattaSon = (num1, num2) => {
+//   if (num1 > num2) return num1;
+//   else return num2;
+// };
+
+// let result = kattaSon(7, 9);
+// console.log(result);
+
+//=============================================
+
+// 35.Funksiya 2ta argument berilsa, funksiya anashu 2ta argumentdan iborat massiv qaytarsin.
+
+// const arr = (num1, num2) => {
+//   let massiv = [];
+//   massiv.push(num1, num2);
+//   return massiv;
+// };
+
+// let result = arr(2, 2);
+// console.log(result);
+
+//========================================================
+
+// 36.Funksiyaga 2ta argument sifatida string ko’rinishidagi ma’lumotlar beriladi.
+// Agar ushbu ikkala stringdagi belgilar soni bir17
+// birinikiga teng bo’lsa funksiya rost qiymat qaytarsin, aks hold
+// yolg’on
+
+// const tengStrings = (str1, str2) => {
+//   return str1.length === str2.length ? true : false;
+// };
+
+// let result = tengStrings("123", "123");
+
+// console.log(result);
+
+//========================================
+
+// 37.Shunday funksiya yasangki, unga string argument qilib
+// beriladi, agar ushbu string bo’sh bo’lsa funksiya true qaytaradi,
+// aks holda false.
+
+// const boshString = (str) => {
+//   return str.length == 0 ? true : false;
+// };
+
+// let result = boshString("");
+
+// console.log(result);
+
+//=========================================
+
+// 38.Shunday funksiya yasang.Unda butun son argument qilib
+// beriladi. Agar ushbu butun son 5ga bo’linsa, funksiya true
+// qaytarsin, aks holda false.
+
+// const bolinsinBesh = (num) => {
+//   return num % 5 == 0 ? true : false;
+// };
+
+// let result = bolinsinBesh(45);
+
+// console.log(result);
+
+//=============================================
+
+// 39.Shunday funksiya yasang.Unda butun son argument qilib
+// beriladi. Agar ushbu butun son 100ga bo’linsa, funksiya true
+// qaytarsin, aks holda false.
+
+// const bolinsin100 = (num) => {
+//   return num % 100 == 0 ? true : false;
+// };
+
+// let result = bolinsin100(1000);
+// console.log(result);
+
+//============================================
+
+// 41.Funksiya 2ta argument qabul qiladi. Birinchi argument
+// ikkinchi argumentdan katta emas. Agar birinchi argumentni
+// ikkinchisiga bo’linsa, funksiya true qaytaradi aks holda false
+
+// const bolinsin = (num1, num2) => {
+//   return num1 % num2 == 0 ? true : false;
+// };
+
+// let result = bolinsin(99, 11);
+
+// console.log(result);
+
+//==============================================
+
+// 42.Funksiyaga raqam string ko’rinishida berilsa, funksiya ushbu
+// ma’lumotni yana raqam ma’lumot turi ko’rinishida qaytarib
+// bersin.
+
+// const raqam = (str) => {
+//   return Number(str);
+// };
+
+// let result = raqam("123");
+// console.log(result);
+
+//========================================
+
+// 43.To’rtburchakning yuzini hisoblaydigan funksiya yasang.
+// Bunda funksiyaga to’rtburchakning(ya’ni to’g’ri turtburchak)
+// tomonlari beriladi. Funksiya uning yuzini qaytarishi kerak,
+// agar tomonlar xato kiritilgan bo’lsa funksiya -1 qaytarsin.
+
+// const tortburchakYuzi = (a, b) => {
+//   if (a > 0 && b > 0) {
+//     return a * b;
+//   } else return "tomonlardan biri notogri";
+// };
+
+// let result = tortburchakYuzi(0, 2);
+
+// console.log(result);
+
+//=============================================
+
+// 44.Funksiyaga ism va familiya argument qilib berilsa, funksiya
+// “ism, familiya” formatdagi string qaytarsin.
+// function ismFam(ism, familiya) {
+// // code...
+// }
+// Namuna:
+// ismFam("First", "Last") ᔍ "Last, First"
+
+// const ismFam = (ism, fam) => {
+//   return ism + ", " + fam;
+// };
+
+// let result = ismFam("asadbek", "Abdulhamidov");
+// console.log(result);
+
+//===============================================
