@@ -557,3 +557,136 @@
 // } else {
 //   console.log(false);
 // }
+
+// 1)Foydalanuvchidan yoshni so’raydigan dasturni tuzing.
+//Yosh 50 dan y uqori bo’lsa, dastur “Siz kattasiz” deb chiqarib berishi kerak.
+//Yosh 50 dan past bo’lsa “Siz yoshsiz” deb chiqarib berishi kerak.
+
+// let age = +prompt("yoshingizni kiriting ");
+
+// if (age >= 50) console.log("Siz katta yoshsiz");
+// else console.log("siz yoshsiz");
+//==============================================
+
+// 2)Somsani narxini so’raydigan dastur.
+//Narx 3000 dan yuqori bo’lsa - dastur “qimmat” deb chiqarib bersin.
+//3000 dan arzon bo’lsa - “arzon” deb chiqarib bersin.
+
+// let price = +prompt("narxini kirting");
+
+// if (price == 3000) console.log("somsa narxi normal");
+// else if (price > 3000) console.log("qimmat");
+// else console.log(arzon);
+
+//=====================================
+
+// 3). Foydalanuvchidan imtihonda necha ball to`plagani so`ralsin.
+//Agar u 40 yoki 60 dan past to`plagan bo`lsa “balingiz past” deb chiqarilsin.
+//Agar 100 va 130 ball orasida to`plagan bo`lsa “natijangiz yaxshi” deb
+//chiqarilsin, agar 130 baldan yuqori bo`lsa “natijangiz zo`r deb chiqarilsin”.
+
+// let ball = +prompt("toplagan balingizni kirting");
+
+// if (ball < 60) console.log(`balingiz past`);
+// else if (ball > 100 && ball < 130) console.log(`natijangiz yaxshi`);
+// else if (ball > 130) console.log(`natijangiz zor`);
+
+// =========================================
+
+// 4)Parolni tekshiradigan dastur.
+// Foydalanuvchi “codial” parolini kiritgan bo’lsa,
+//     u bilan salomlashing.Boshqa narsa kiritgan bo’lsa - unga
+//     “Xato!” deb yozing.
+
+// let password = prompt("parolingizni kiritng");
+
+// if (password === "codial") console.log("salom hush kelibsz");
+// else console.log("parolingiz hato");
+//======================================================
+
+// 5). Foydalanuvchidan oylik maoshi so`ralsin.
+//Agar 1500$ yoki 2000$ kiritsa kasbini so`ralsin,
+//agar 500$ va 700$ orasida kiritsa “Boshqa ish topishingiz kerak”,
+//aks holda “Siz bu ketishda BMW ololmaysiz!” deb chiqarilsin.
+
+// let maosh = +prompt("maoshingizni kirting ");
+
+// if (maosh == 1500 || maosh == 2000) console.log("kasbingiz nima");
+// else if (maosh == 500 || maosh == 700) {
+//   console.log(`boshqa ish topishingiz kerak aks holda siz BMW ololmaysiz`);
+// }
+//============================================================
+// 6)Foydalanuvchidan ismini so’rang.
+//Ismi “Ali” bo’lsa, unga “Salom og’a” deb yozing.
+//Ismi “Ahmad” bo’lsa, unga “Ko’rinmayapsan dostim,
+//nima qilyapsan ?” deb yozing.
+
+// let ism = prompt("ismingizni kirting");
+
+// if (ism == "Ali") console.log("Salom oga");
+// else if (ism == "Ahmad") console.log(`Ko'rinmayapsan dostim nimalar qilyapsan`);
+
+//=========================================================
+
+// 7)Oshxonani menyusini tuzing.
+//Foydalanuvchi “somsa” deb kiritsa - unga “3000” deb yozing.
+//“palov” deb kiritsa “15000” deb yozing. “gumma” - “2000”.
+
+// let eat = prompt(`ovqat nomini kirting`);
+
+// if (eat == "somsa") console.log("3000");
+// else if (eat == "palov") console.log(`15000`);
+// else if (eat == "gumma") console.log(2000);
+
+//==============================================
+
+// 8)Narxlar: Somsa: 3000 Palov: 15000 Kabob: 12000
+// Foydalanuvchi unda bor pulini kiritsin.
+//Va mahsulotni tanlasin.Puli yetsa - “sotib oldingiz” deb chiqaring.
+//Puli yetmasa - “uzr, pul yetmadi” deb yozing.
+
+// let price = +prompt("pulingizni kiriting");
+// let eatName = prompt("ovqat nomini kiritng");
+
+// if (price >= 15000 && "palov") console.log("sotib oldingiz");
+// else console.log("uzr pulingiz yetmadi");
+
+// if (price >= 12000 && "kabob") console.log("sotib oldingiz");
+// else console.log("uzr pulingiz yetmadi");
+
+// if (price >= 3000 && "somsa") console.log("sotib oldingiz");
+// else console.log("uzr pulingiz yetmadi");
+
+//====================================================
+
+// 9) Foydalanuvchidan yoshini so'rab, kiruvchi yosh bo'yicha
+//"Yosh katta" yoki "Yosh kichik" degan xabarni chiqaring.
+//(Agar foydalanuvchi kiritgan yosh 18 dan katta yoki teng bo'lsa,
+//"Yosh katta" deb hisoblang.)
+
+// let age = +prompt("yoshingizni kirting");
+// if (age != 0 && age < 0) console.log("xato yosh kirtdingiz");
+// else if (age >= 18) console.log("yosh katta");
+// else console.log("yosh kichik");
+
+//======================================================
+
+// 10)Foydalanuvchidan ikki son kiritishni so'rab.
+//Agar birinchi son ikkinchi songa teng bo'lsa,
+//"Sonlar teng" aks holda "Sonlar teng emas" degan xabarni chiqaring.
+
+// let num1 = +prompt("raqam kirting");
+// let num2 = +prompt("raqam kirting");
+
+// if (num1 === num2) console.log("ha bu sonlar hamma tomonlama teng");
+// else console.log("sonlar teng emas");
+//===============================================
+
+// 11) Foydalanuvchidan nechinchi qavatda turishini so`rang.
+//Agar 4 va 10 – qavat orasida kiritsa unga “Liftdan foydalaning”,
+//aks holda “Zinadan chiqishingiz mumkin” deb chiqarilsin.
+
+// let qavat = 10;
+
+// if (qavat >= 4 && qavat <= 10) console.log("loftdan foydalaning");
+// else console.log("zinadan chiqishingiz mumkin");

@@ -163,7 +163,27 @@
 // Input: n = 5, A = 2, B = 3
 // Output: [2, 3, 5, 10, 20]
 
-// Array3. n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+let n = 5;
+let A = 2;
+let B = 3;
+
+function getArr(n, a, b) {
+  let arr = [a, b];
+  let count = 0;
+  for (let i = 0; i < n; i++) {
+    for (let k = 0; k < arr.length; k++) {
+      count += arr[k];
+    }
+    arr.push(count);
+  }
+  return arr;
+}
+
+let result = getArr(n, A, B);
+console.log(result);
+
+// Array3. n ta elementdan tashkil topgan massiv berilgan.
+// Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
 
 // Array4. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini indekslari o'sish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
 // Massiv elementlar: 4 5 7 8 6 9
