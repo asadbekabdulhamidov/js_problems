@@ -190,6 +190,20 @@
 //so‘rab, agar har bir qism bosh harf bilan boshlansa
 //"To‘g‘ri FIO", aks holda "Noto‘g‘ri FIO" deb chiqaring.
 
+// let FIO = "Asadbek Abdulhamidov Abdulnosir";
+
+// let arr = FIO.split(" ");
+// let count = 0;
+
+// for (item of arr) {
+//   if (item[0] == item[0].toUpperCase()) {
+//     count++;
+//   }
+// }
+
+// if (count == 3) console.log("togri FIO");
+// else console.log("Notogri FIO");
+
 //===============================================
 
 // 18) Foydalanuvchidan matn so‘rab,
