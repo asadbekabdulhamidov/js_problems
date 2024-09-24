@@ -432,9 +432,41 @@
 // indeksini chiqaruvchi programma tuzilsin.Lokal maksimum
 //- o'ng va chap qo'shinisidan katta bo'lgan element.
 
+// let arr = [1, 24, 34, 12, 34, 90, 3, 5, 1];
+
+// // arr.reverse()
+
+// let a = Infinity;
+
+// arr.forEach((item, i) => {
+//   console.log(item);
+
+//   if (item > arr[i - 1] && item > arr[i + 1]) {
+//     a = item;
+//   }
+// });
+
+// console.log(arr.indexOf(a));
+
+//===============================================
+
 // Array16. n ta elementdan tashkil topgan
 //massiv va R butun soni berilgan.Massiv elementlari
 //orasidan R soniga eng yaqin sonni topuvchi programma tuzilsin.
+
+// let arr = [1, 24, 34, 12, 34, 3];
+// const R = 89;
+
+// let count = Infinity;
+// let son = 0;
+
+// arr.forEach((item) => {
+//   if (count > Math.abs(R - item)) {
+//     count = Math.abs(R - item);
+//     son = item;
+//   }
+// });
+// console.log(son);
 
 //====================================================
 // Array17. n ta elementdan tashkil topgan massiv berilgan.
@@ -471,28 +503,554 @@
 //Massiv elementlari orasida aniq 2 ta bir xil qiymatli element
 //bor.Shu bir xil qiymatli elementlar indeksini chiqaruvchi programma tuzilsin.
 
-// Array19. n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko'p qatnashgan bir xil qiymatli elementni va uning sonini chiqaruvchi programma tuzilsin.
+// const massiv = [1, 2, 3, 4, 5, 6, 7, 3];
+// let indekslar = [];
 
-// Array20. n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni va elementlari chiqarilsin.
+// for (let i = 0; i < massiv.length; i++) {
+//   for (let j = i + 1; j < massiv.length; j++) {
+//     if (massiv[i] === massiv[j]) {
+//       indekslar.push(i, j);
+//     }
+//   }
+// }
 
-// Array21. n ta butun sonlardan iborat a massiv va k butun soni berilgan. Massivning har bir elementini k ga orttiruvchi programma tuzilsin.
+// console.log(indekslar);
 
-// Array22. n ta elementdan iborat massiv berilgan (n juft son). Massivning birinchi yarmi va ikkinchi yarmi qiymatlari almashtirilsin.
+//=======================
+// Array19. n ta elementdan tashkil topgan massiv berilgan.
+//Massivda eng ko'p qatnashgan bir xil qiymatli elementni
+//va uning sonini chiqaruvchi programma tuzilsin.
 
-// Array23. n ta elementdan iborat massiv berilgan. Massivning elementlari teskari tartibda joylashtirilsin. (DIQQAT: Sizdan teskari tartibda chiqarish talab qilinayotgani yo'q. a[0] element a[n-1] bilan almashsin, va hakazo, teskari tartibda joylashtirish talab qilinyapti)
+// let engKopTakrorlanganEl = (arr) => {
+//   let elementlarSoni = {};
+//   arr.forEach((item) => {
+//     if (elementlarSoni[item]) elementlarSoni[item]++;
+//     else elementlarSoni[item] = 1;
+//   });
 
-// Array24. n ta butun sonlardan iborat a massiv berilgan. Massivning eng kichik va eng katta elementlari orasidagilarini nolga almashtiruvchi programma tuzilsin. Eng kichik va eng katta elementlari o'zgarishsiz qoldirilsin.
+//   let engKopElement = null;
+//   let engKopSon = 0;
 
-// Array25. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam chapga siklik siljituvchi programma tuzilsin. a[n-1] element qiymati a[n-2] ga o'tadi, a[n-2] esa a[n-3] ga, ... a[0] esa a [n-1] ga o'tadi.
+//   for (let item in elementlarSoni) {
+//     if (elementlarSoni[item] > engKopSon) {
+//       engKopSon = elementlarSoni[item];
+//       engKopElement = item;
+//     }
+//   }
+//   return { element: engKopElement, soni: engKopSon };
+// };
 
-// Array26. n ta elementdan tashkil topgan massiv va k butun soni berilgan (0<= k < n). Indeksi k ga teng bo'lgan elementni o'chiruvchi va yangi massiv qaytaruvchi deleteElementWithIndex(arr, k) nomli funksiya tuzilsin.
+// const massiv = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 2, 2, 2, 2];
+// let result = engKopTakrorlanganEl(massiv);
+// console.log(result);
 
-// Array27. n ta elementdan tashkil topgan massiv va k, m butun sonlari berilgan (0< k < m < n). Indeksi k dan m gacha bo'lgan elementlarni o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlar soni va elementlari chiqarilsin.
+//==================================================
 
-// Array28. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir xil qo'shnilarning birini o'chiruvchi programma tuzilsin.
+// Array21. n ta butun sonlardan iborat a massiv
+// va k butun soni berilgan.Massivning har bir elementini
+//k ga orttiruvchi programma tuzilsin.
 
-// Array29. n ta elementdan tashkil topgan arr nomli massiv berilgan. Massiv elementlari orasidan faqat 1 marta ishtirok etganlaridan iborat yangi massiv qaytaruvchi getElementsOneTime(arr) nomli funksiya tuzing.
+// let k = 2;
+// const massiv = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 2, 2, 2, 2];
+// let arr = massiv.map((num) => num * k);
+// console.log(arr);
+//=============================
+
+// Array22. n ta elementdan iborat massiv berilgan (n juft son).
+// Massivning birinchi yarmi va ikkinchi yarmi qiymatlari
+//almashtirilsin.
+
+// const massiv = [1, 2, 3, 4, 5, 6, 3, 2, 3, 3, 2, 2, 2, 2];
+// let yarmi = Math.floor(massiv.length / 2);
+// massiv.copyWithin(0, yarmi);
+
+// let yangiMassiv = massiv.slice(yarmi).concat(massiv.slice(0, yarmi));
+// console.log(massiv);
+
+//================================================
+
+// Array24. n ta butun sonlardan iborat a massiv berilgan.
+// Massivning eng kichik va eng katta elementlari orasidagilarini
+// nolga almashtiruvchi programma tuzilsin.Eng kichik va eng katta
+//elementlari o'zgarishsiz qoldirilsin.
+
+// const nolgaTeng = function (massiv) {
+//   let engMin = Math.min(...massiv);
+//   let engMax = Math.max(...massiv);
+
+//   let minIndex = massiv.indexOf(engMin);
+//   let maxIndex = massiv.indexOf(engMax);
+
+//   if (minIndex > maxIndex) [minIndex, maxIndex] = [maxIndex, minIndex];
+
+//   for (let i = minIndex + 1; i < maxIndex; i++) {
+//     massiv[i] = 0;
+//   }
+//   return massiv;
+// };
+// let massiv = [9, 2, 3, 4, 5, 6, 7, 8, 1];
+// let result = nolgaTeng(massiv);
+
+// console.log(result);
+
+// Array25. n ta elementdan tashkil topgan massiv berilgan.
+// Massiv elementlarini bir qadam chapga siklik siljituvchi
+// programma tuzilsin.a[n - 1] element qiymati a[n - 2] ga o'tadi,
+//a[n - 2] esa a[n - 3] ga, ...a[0] esa a[n - 1] ga o'tadi.
+
+// let siklSiljish = function (arr) {
+//   let n = arr.shift();
+//   arr.push(n);
+//   return arr;
+// };
+
+// let arr = [9, 2, 3, 4, 5, 6, 7, 8, 1];
+// let result = siklSiljish(arr);
+// console.log(result);
+
+//ikkinchi usul
+// let n = arr.lenth;
+// arr.copyWithin(n, 0, 1);
+// console.log(arr);
+
+//==================================
+
+// Array26. n ta elementdan tashkil topgan massiv va k butun
+//soni berilgan(0 <= k < n).Indeksi k ga teng bo'lgan elementni
+//o'chiruvchi va yangi massiv qaytaruvchi
+//deleteElementWithIndex(arr, k) nomli funksiya tuzilsin.
+
+// let deleteElementWithIndex = function (arr, k) {
+//   arr.splice(k, 1);
+//   return arr;
+// };
+// let arr = [9, 2, 3, 4, 5, 6, 7, 8, 1];
+// let k = 3;
+// let result = deleteElementWithIndex(arr, k);
+// console.log(result);
+
+//======================================
+
+// Array27. n ta elementdan tashkil topgan massiv va k, m
+//butun sonlari berilgan(0 < k < m < n).Indeksi k dan m gacha
+// bo'lgan elementlarni o'chiruvchi programma tuzilsin.
+//Hosil bo'lgan massiv elementlar soni va elementlari chiqarilsin.
+// let deleteElementWithIndex = function (arr, k, m) {
+//   let lastIndex = m - k;
+
+//   arr.splice(k, lastIndex);
+//   return arr;
+// };
+// let arr = [9, 2, 3, 4, 5, 6, 7, 8, 1];
+// let k = 3;
+// let m = 6;
+// let result = deleteElementWithIndex(arr, k, m);
+// console.log(result);
+
+//===============================
+
+// Array28. n ta elementdan tashkil topgan massiv berilgan.
+//Massiv elementlari orasidan bir xil qo'shnilarning birini
+//o'chiruvchi programma tuzilsin.
+
+// let arr = [9, 2, 3, 4, 4, 4, 5, 5, 6, 7, 8, 1];
+// for (let i = 0; i < arr.length - 1; i++) {
+//   if (arr[i] == arr[i + 1]) {
+//     arr.splice(i, 1);
+//     i--;
+//   }
+// }
+// console.log(arr);
+
+//===================
+
+// Array29. n ta elementdan tashkil topgan arr nomli massiv
+//berilgan.Massiv elementlari orasidan faqat 1 marta ishtirok
+//etganlaridan iborat yangi massiv qaytaruvchi
+//getElementsOneTime(arr) nomli funksiya tuzing.
 // Input: [1, 5, 6, 1, 5, 7, 2]
 // Output: [6, 7, 2]
 
-// Array30. arr nomli massivda k qiymatli bir nech element mavjude. Shu elementlar indekslari massividan iborat qiymat qaytaruvchid searchAllElements(arr) nomli funksiya hosil qiling !
+// function getElementsOneTime(arr) {
+//   const elementCount = {};
+
+//   for (let item of arr) {
+//     if (elementCount[item]) {
+//       elementCount[item]++;
+//     } else {
+//       elementCount[item] = 1;
+//     }
+//   }
+
+//   let result = [];
+
+//   for (let key in elementCount) {
+//     if (elementCount[key] === 1) result.push(Number(key));
+//   }
+
+//   return result;
+// }
+
+// let arr = [1, 5, 6, 1, 5, 7, 2];
+// let result = getElementsOneTime(arr);
+// console.log(result);
+
+//===================================
+// Array30. arr nomli massivda k qiymatli bir nech element
+//mavjud.Shu elementlar indekslari massividan iborat qiymat
+//qaytaruvchid searchAllElements(arr) nomli funksiya hosil qiling!
+
+// function searchAllElements(arr, k) {
+//   let result = [];
+
+//   arr.forEach((item, index) => {
+//     if (k == item) result.push(index);
+//   });
+//   return result;
+// }
+
+// let arr = [1, 5, 6, 2, 2, 1, 5, 7, 2];
+// let k = 2;
+// let result = searchAllElements(arr, k);
+// console.log(result);
+
+//===========================================
+
+// Task 1 mevalar = ['olma', 'banan', 'uzum', 'shaftoli']
+//Berilgan massivdan bitta elementni o'chiring. va
+//consolga chiqaring.
+
+// let mevalar = ["olma", "banan", "uzum", "shaftoli"];
+// mevalar.pop();
+// console.log(mevalar);
+//==============================================
+
+// Task 2: Probel bilan ajratilgan o'zbekcha so'zlardan
+//iborat satr berilgan.Satrdagi so'zlar sonini
+// aniqlovchi programma tuzilsin.
+
+// let matn = "assalomu alaykum hayrli tong";
+
+// let arr = matn.split(" ");
+// console.log(arr.length);
+
+//================================================
+
+// Task 3: Probel bilan ajratilgan o'zbekcha so'zlardan
+//iborat satr berilgan.Satrdagi eng qisqa so'z
+// uzunligini aniqlovchi programma tuzilsin.
+
+// let matn = "assalomu alaykum hayrli tong";
+// let arr = matn.split(" ");
+
+// let engQisqa = arr[0].length;
+
+// for (value of arr) {
+//   if (value.length < engQisqa) {
+//     engQisqa = value.length;
+//   }
+// }
+
+// console.log(engQisqa);
+
+//===================================================
+
+// Task 4: ["Abbosjon" , "Asrorjon", "Alijon", "Sardorjon"]
+//ushbu arroydan foydalab = nib yangi array yarating Yangi
+//arraydagi ismlar jon emas  bek qo'shimchasi bilan yozilsin.
+//===================================================
+
+// Task 5:  ["Abbosbek" , "Asrorjon", "Alibek", "Sardorjon"]
+//ushbu arraydagi ismlar qo'shimchalari jon bo'lsa bek ga bek
+// bo'lsa jonga o'zgarsin
+
+// let ismlar = ["Abbosbek", "Asrorjon", "Alibek", "Sardorjon"];
+
+// let newIsmlar = ismlar.map((item) => {
+//   if (item.endsWith("jon")) {
+//     return item.replace("jon", "bek");
+//   } else if (item.endsWith("bek")) {
+//     return item.replace("bek", "jon");
+//   } else return item;
+// });
+
+// console.log(newIsmlar);
+
+//==========================================
+
+// Task 6:  ["Abbosbek" , "Asrorjon", "Alibek",
+//"Sardorjon", "Nilufarxon", "Maftunaxon"] berilgan
+//arraydagi ismlarda bek bo`lsa jonga, jon bo`lsa bekga
+//o`zgartirilsin agarda xon qatnashga bo`lsa ismlar o`zgartirilmasin
+
+// let ismlar = [
+//   "Abbosbek",
+//   "Asrorjon",
+//   "Alibek",
+//   "Sardorjon",
+//   "Nilufarxon",
+//   "Maftunaxon",
+// ];
+
+// let newIsmlar = ismlar.map((item) => {
+//   if (item.endsWith("jon")) {
+//     return item.replace("jon", "bek");
+//   } else if (item.endsWith("bek")) {
+//     return item.replace("bek", "jon");
+//   } else return item;
+// });
+
+// console.log(newIsmlar);
+//===============================================
+// Task 7: "Salom Mening ismim Abbosbek.
+//Men Codial akademiyasida ishlayman" ushbu gapda nechta
+//harf ishlatilgan ?
+
+// let str = "Salom Mening ismim Abbosbek. Men Codial akademiyasida ishlayman";
+
+// let arr = str.split(" ");
+// let count = 0;
+
+// for (value of arr) {
+//   count += value.length;
+// }
+// console.log(count);
+
+//=====================================
+
+// Task 8: mevalar = ['olma', 'banan', 'uzum']
+//Berilgan arrayga yangi meva nomini  qo'shing va arrayni
+//consolega chiqaring.
+
+// let mevalar = ["olma", "banan", "uzum"];
+
+// mevalar.push("ananas");
+// console.log(mevalar);
+
+//=============================
+
+// Task9: mevalar = ['olma', 'banan', 'uzum'];
+// array berilgan  Arraydan  ikkinchi indexdagi  elementni o'chiring.
+
+// let mevalar = ["olma", "banan", "uzum"];
+
+// mevalar.splice(2, 1);
+// console.log(mevalar);
+//==========================================
+
+// Task 10:  birinchiArray = [1, 2, 3],
+//ikkinchiArray = [4, 5, 6] ikkita array berilgan
+//arrayni bir - biriga qo'shing  va natijani consolga chiqaring.
+
+// let birinchiArray = [1, 2, 3],
+//   ikkinchiArray = [4, 5, 6];
+
+// console.log(birinchiArray.concat(ikkinchiArray));
+
+//============================================
+
+// Task 11:  mevalar = ['olma', 'banan', 'uzum']
+//array berilgan foydalanuvchi kiritgan mevani
+//nechinchi indeksda joylashganini chiqarib bering.
+
+// let mevalar = ["olma", "banan", "uzum"];
+
+// let meva = "olma";
+
+// console.log(mevalar.indexOf(meva));
+
+//========================================
+
+// Task12: mevalar = ['olma', 'banan', 'uzum', 'shaftoli']
+//array Berilgan arraydagi elementlarni teskari tartibda
+//joylashtiring.va consolga chiqaring;
+
+// let mevalar = ["olma", "banan", "uzum", "shaftoli"];
+
+// let reverceMevalar = mevalar.reverse();
+// console.log(mevalar);
+
+//===============================================
+
+// Task 13: ismlar = ['Ali', 'Vali', 'Dilshod', 'Bobur']
+//array Berilgan arraydagi elementlarni teskari tartibda
+//joylashtiring.va consolga chiqaring;
+
+// let ismlar = ["Ali", "Vali", "Dilshod", "Bobur"];
+
+// let reverseIsmlar = ismlar.reverse();
+// console.log(reverseIsmlar);
+
+// homework
+
+// 1-masala: sonlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] sonlardan
+//iborat array berilgan ushbu arraydan foydalanib yangi array
+//yarating va ushbu arrayda faqat juft sonlarni consolga natijani
+//chiqaring.
+
+// const oddArr = (arr) => {
+//   return arr.filter((num) => num % 2 == 0);
+// };
+// let sonlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let result = oddArr(sonlar);
+// console.log(result);
+
+//=============================================
+
+//  2-masala sonlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//sonlardan iborat array berilgan ushbu arraydan foydalanib
+//yangi array yarating va ushbu arrayda faqat toq sonlarni
+// consolga natijani chiqaring.
+
+// let sonlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenArr = sonlar.filter((son) => {
+//   return son % 2 == 1;
+// });
+
+// console.log(evenArr);
+
+//================================
+
+// 3-masala matnlar = ["salom", "hayr", "javascript", "filter",
+//"mavzu", "masala"]
+//so`zlardan iborat array berilgan ushbu arraydan
+//foydalanib so`zlar uzunligi 5dan kotta bo`lgan so`zlarni
+// consolga chiqaring.
+
+// let matnlar = ["salom", "hayr", "javascript", "filter", "mavzu", "masala"];
+
+// let uzunligi = matnlar.filter((soz) => soz.length > 5);
+// console.log(uzunligi);
+
+//====================================
+// 4-masala  const massiv = ['JavaScript', 'Java', 'Python',
+//'Node.js', 'React', 'Angular'] array berliga berilgan
+//arraydan foydalanib yangi array yarating va  so`zlar ichida
+//"java"  qatnashgan bo`lsa o`sha so`zlarni consolga chiqaring.
+
+// const massiv = ["JavaScript", "Java", "Python", "Node.js", "React", "Angular"];
+
+// let javaArr = massiv.filter((item) => item.includes("Java"));
+// console.log(javaArr);
+
+// /===========================================
+
+//  5-masala  const massiv = [15, 25, 35, 45, 55];
+//array berilga berilgan arraydan foydalanib yangi array
+//yarating va 30dan kichik bo`lga sonlarni consolga chiqaring
+
+// const massiv = [15, 25, 35, 45, 55];
+// let newArr = massiv.filter((num) => num < 30);
+// console.log(newArr);
+
+//==================================
+
+// 6-masala var text = “salom men codialda ishlayman ”
+//sitring malumotda matn berilgan berilgan sitrigdan foydalanib
+//yangi array yarating va o`sha arrayga faqat uzunligi 5dan kotta
+//bo`lgan so`zlar qolsin.
+
+// let text = "salom men codialda ishlayman";
+
+// let arr = text.split(" ").filter((soz) => soz.length > 5);
+// console.log(arr);
+
+//=============================
+
+// 7-masala let harflar = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+// array berilga ushbu arraydan foydalanib yangi array yarating
+//va o`sha arrayga faqat unli harflarni joylashtiring va consolga
+//chiqaring
+
+// let harflar = ["a", "b", "c", "d", "e", "f", "g"];
+
+// let unli = harflar.filter((harf) =>
+//   ["a", "e", "i", "o", "u", "o'"].includes(harf)
+// );
+
+// console.log(unli);
+
+//====================================
+
+// 8-masala sozlar = ["olma", "banan", "shaftoli", "nok", "anor"]
+// massiv berilgan berilgan massivdan foydalanib yangi massiv
+//yarating va massivda "a" harfin o`z ichiga olgan so`zlarni consolga chiqaring.
+
+// let sozlar = ["olma", "banan", "shaftoli", "nok", "anor"];
+// let mevalar = sozlar.filter((soz) => soz.includes("a"));
+// console.log(mevalar);
+
+//============================================
+
+// 9-masala ["Abbosbek" , "Islombek","Alijon","Muhammaddiyor",
+//"Mardonbek", "Azimjon"]  ushbu arraydan foydalanib yangi
+//array yarating yangi arrayga faqat "bek" qo'shimchasi borlar
+//yozilsin.
+
+// let ismlar = [
+//   "Abbosbek",
+//   "Islombek",
+//   "Alijon",
+//   "Muhammaddiyor",
+//   "Mardonbek",
+//   "Azimjon",
+// ];
+
+// let beklar = ismlar.filter((ism) => ism.includes("bek"));
+// console.log(beklar);
+
+// let beklar = ismlar.filter((ism) => ism.endsWith("bek"));
+
+// console.log(beklar);
+
+//=====================================
+
+// 10-masala sozlar = ["JavaScript", "Python", "HTML", "CSS",
+//"React", "Node"]; array berilgan berilgan arraydan foydalanib
+// yangi array yarating va arraydagi so`zlarni uzunligi 4 dan
+//kottalarini arrayga qo`shing va consolga chiqaring
+
+// let sozlar = ["JavaScript", "Python", "HTML", "CSS", "React", "Node"];
+
+// let newArr = sozlar.filter((soz) => soz.length > 4);
+// console.log(newArr);
+
+// 11-masala    sozlar = ["apple", "banana", "cherry", "date",
+//"grape"]; massiv berilgan berilgan massivdan foydalanib yangi
+// massiv yarating va massivda "b" harfin o`z ichiga olgan
+//so`zlarni consolga chiqaring.
+
+// let sozlar = ["apple", "banana", "cherry", "date", "grape"];
+
+// let mevalar = sozlar.filter((soz) => soz.includes("b"));
+// console.log(mevalar);
+
+// let arr = [];
+// sozlar.forEach((soz) => {
+//   if (soz.includes("n")) arr.push(soz);
+// });
+
+// console.log(arr);
+
+// 12-masala  const massiv = [11, 22, 33, 44, 55, 66, 77, 88, 99, 111];
+//array berilga berilgan arraydan foydalanib yangi array
+//yarating va  69 dan kotta bo`lga sonlarni consolga  chiqaring.
+
+// const massiv = [11, 22, 33, 44, 55, 66, 77, 88, 99, 111];
+
+// let arr = massiv.filter((son) => son > 69);
+
+// console.log(arr);
+
+//================================
+
+// 13-masala var sozlar = ["apple", "banana", "orange", "kiwi", "grape"]
+//array berilgan  ushbu arraydan foydalanib arraydagi
+//so`zlarni uzunligi 5 dan kotta bo`lgan so`zlarni consolga chiqaring.
+
+// let sozlar = ["apple", "banana", "orange", "kiwi", "grape"];
+
+// let arr = sozlar.filter((soz) => soz.length > 5);
+// console.log(arr);
+
+//==============================================
