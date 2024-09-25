@@ -674,3 +674,286 @@
 // console.log(result);
 
 //===============================================
+
+// 46.Shunday funksiya yasangki, ushbu funksiya 2ta argument
+// qabul qiladi. Birinchi argument massive, ikkinchi argument
+// ushbu massivni boshidan boshlab nechta elementni tushurib
+
+// qoldirish. Tushirib qoldirilgandan so’ng funksiya natijani
+// qaytarsin.
+// function tushirMassiv(arr, tushirishSoni) {
+//   for (let i = 0; i < tushirishSoni; i++) {
+//     arr.shift();
+//   }
+
+//   return arr;
+// }
+// let arr = [1, 1, 2, 4, 5, 6, 6, 4];
+// let result = tushirMassiv(arr, 4);
+// console.log(result);
+
+//==========================================
+
+// 47.Funksiya argument sifatida ovoz berib qo’llab quvvatlashlar
+// soni va ovoz berib qo’llamaganlar sonini qabul qiladi. Funksiya
+// natijani qaytarsin.
+
+// function ovozlar(ovozObj) {
+//   let count = ovozObj.upvotes - ovozObj.downvotes;
+//   return count;
+// }
+
+// let result = ovozlar({ upvotes: 13, downvotes: 1 });
+// console.log(result);
+
+//==============================================
+
+// 48.Funksiya son qabul qilsa, ushbu sonning negativini qaytarsin.
+
+// let negativSon = (num) => {
+//   if (num > 0) return -num;
+//   else if (num < 0) return Math.abs(num);
+// };
+
+// let result = negativSon(1);
+// console.log(result);
+
+//======================================
+
+// 50.Kinoteatrga bollar kino ko’rgani kirmoqchi bunda 2ta talab
+// mavjud. Shunda funksiya 2ta argument qabul qiladi. Bolaning
+// yoshini va ota-onasi bilan birgami degan boolean qiymat. Agar
+// bolaning yoshi kamida 15 bo’lsa va ota-onasi bilan birga bo’lsa
+// funksiya true qaytarsin aks holda false.
+
+// let kinogaKirish = (age, otaOna) => {
+//   if (age >= 15 && otaOna) return true;
+//   else return false;
+// };
+
+// console.log(kinogaKirish(11, false));
+
+//======================================
+
+// 51.Quyidagi namunalarda kamchilik bor funksiya aslida har
+// bir massivning elementiga 1 qo’shishi kerak. Funksiya to’g’ri
+// yasang.
+
+// let arr = [0, 1, 2, 3];
+// let birgaOshir = arr.map((item) => (item += 1));
+// console.log(birgaOshir);
+
+//===========================================
+
+// 52.Template string yordamida ya’ni backticlar orqali “ ushbu
+// formatdagi stringni hosil qiling.
+
+// let ism = "Asadbek";
+// let familiya = "Abdulhamidov";
+
+// let strfunc = (ism, familiya) => {
+//   return `${ism} ${familiya}`;
+// };
+
+// let result = strfunc(ism, familiya);
+
+// console.log(result);
+
+//=========================================
+
+// 54.Funksiya string qabul qiladi. Agar ushbu stringning uzunligi.
+// juft bo’lsa funksiya true qaytarsin, aks holda false
+
+// let str = "Asadbek Abdulhamidov";
+
+// const sozUzunligi = function (str) {
+//   if (str.length % 2 == 0) return true;
+//   else return false;
+// };
+
+// let result = sozUzunligi(str);
+// console.log(result);
+
+//========================================
+
+// 55.Funksiya 2ta argument qabul qiladi. Ikkala argument ham
+// son, funksiya 1-sonni 2-songa darajaga ko’tarilgan qiymatni
+// qaytarsin.
+
+// const daraja = (num1, num2) => {
+//   return num1 ** num2;
+// };
+
+// let result = daraja(3, 3);
+// console.log(result);
+
+//========================
+
+// 56.Funksiya massiv qabul qiladi. Ushbu funksiya massivning
+// so’nggi elementini qaytarib bersin.
+
+// function songiElement(arr) {
+//   return arr.at(-1);
+// }
+
+// let result = songiElement([1, 2, 3, 4]);
+// console.log(result);
+//===============================================
+
+// 57.Kabisa yilini aniqlaydigan funksiya yasang. Agar kiritilgan
+// yil kabisa bo’lsa funksiya true qaytaradi, aks holda false. Kabisa
+// yili 4ga bo’linadigan yil bo’lib, lekin 100ga bo’linsa u holda
+// 400ga ham bo’linganidagina kabisa hisoblanadi.
+
+// function kabisa(yil) {
+//   if (yil % 4 == 0 && (yil % 100 !== 0 || yil % 400 == 0)) return true;
+//   else return false;
+// }
+// let result = kabisa(2020);
+// console.log(result);
+
+//===============================
+// 58.Funskiyaga so’z kiritilsa funksiya ushbu so’zni birinchi
+// harfisiz qaytarib bersin.
+
+// function soz(word) {
+//   return word.slice(1);
+// }
+
+// let result = soz("asadbek");
+// console.log(result);
+
+//===================================
+
+// 59.Boolen qiymatini teskarisini qaytarib beradigan funksiya
+// yasang.
+// function teskariBool(bool) {
+//   return !bool;
+// }
+
+// let result = teskariBool(true);
+// console.log(result);
+
+//===========================================
+
+// 60.Funskiya son qabul qiladi, agar son juft bo’lsa funskiya “juft”
+// qaytaradi, agar toq bo’lsa “toq” qaytarsin.
+
+// function juftMiToqmi(son) {
+//   if (son % 2 == 0) return "juft";
+//   else return "toq";
+// }
+// console.log(juftMiToqmi(3));
+
+//==============================================\
+
+// 61.Quyidagi rasmga muvofiq qutilar teriladi. Qutilarning
+// qavatiga qarab ularning soni oshib boradi.
+
+// function qutilar(qavat) {
+//   return Math.pow(qavat, 2);
+// }
+// let result = qutilar(2);
+// console.log(result);
+
+//=============================================
+
+// 62.Funskiya massiv qabul qiladi, ushbu massivni ichida yoki
+// stringlar yoki numberlar joyshlashgan bo’ladi. funksiya massiv
+// elementlarini bitta string qilib qaytarsin.
+
+// function arrayToString(arr) {
+//   return arr.join("");
+// }
+// let result = arrayToString([1, 2, 3, 4]);
+// console.log(result);
+
+//============================
+
+// 63.Funksia 2ta sonlardan iborat massiv qabul qilsa, ularni
+// birlashtirib bitta massiv ko’rinishida qaytarib bersin.
+// function birlash(arr1, arr2) {
+//   return arr1.concat(arr2);
+// }
+
+// let result = birlash([1, 3, 5], [2, 6, 8]);
+// console.log(result);
+
+//=====================================
+
+// 64.Funskiya 2ta argument qabul qiladi. 1-argument massiv,
+// 2-argument ushbu massivning biron elementi. Funksiya ushbu
+// elementning massiv ichida nechinchi indexda turishini qaytarib
+// bersin
+
+// function topIndex(arr, str) {
+//   return arr.indexOf(str);
+// }
+
+// console.log(topIndex(["hi", "edabit", "fgh", "abc"], "fgh"));
+
+//=======================================
+
+// 65.Funksiya massive bilan index qabul qilsa, ushbu indexdagi
+// massiv elementini qaytarsin.
+// !!! Indexni eng kichik qiymatga qarab yaxlitlang.
+
+// function arrElement(arr, index) {
+//   return arr[Math.floor(index)];
+//   // code...
+// }
+
+// let result = arrElement([1, 2, 3, 4, 5, 6], 10 / 2);
+// console.log(result);
+
+//=============================
+// 66.Quyidagi namunani kuzatgan holda funksiya yasang.
+// namuna([1, 2, 3, 4, 5]) ᔍ 15
+
+// function calc(arr) {
+//   let calcArr = arr.reduce((acc, item) => {
+//     return (acc += item);
+//   }, 0);
+//   return calcArr;
+// }
+
+// console.log(calc([1, 2, 3, 4, 5]));
+
+//===================================
+//.Funksiya tekshirisin, agar unga berilgan stringda bo’sh joy
+// mavjud bo’lsa true qaytarsin, aks holda false.
+// function boshJoy(str) {
+//   // code...
+//   let arr = str.split("").includes(" ");
+//   return arr;
+// }
+
+// let result = boshJoy("hello, world");
+// console.log(result);
+
+//===========================
+
+// Funksiya biron qutining olchamlari ma’lumotlarini object
+// sifatida qabul qiladi. funksiya ushbu qutining hajmini qaytarib
+// bersin. Hajm = Balandlik * Eni * Uzunlik
+
+// function hajm(quti) {
+//   let Hajm = quti.width * quti.length * quti.height;
+//   return Hajm;
+// }
+
+// let result = hajm({ width: 2, length: 5, height: 1 });
+// console.log(result);
+
+//======================================
+
+// .Funksiya son1, son2 va massiv qabul qiladi. Funksiya ushbu
+// massivni ichidan son1dan katta va son2dan kichik sonlarni
+// ajratib olib yangi massiv qaytarsin. Bunda son1 doim son2dan
+// kichik.
+// function sonlar(son1, son2, arr) {
+//   let newArr = arr.filter((item) => son1 < item && son2 > item);
+//   return newArr;
+// }
+
+// console.log(sonlar(3, 8, [1, 5, 95, 0, 4, 7]));
