@@ -1463,3 +1463,480 @@
 // }
 
 // console.log(sonlar(3, 8, [1, 5, 95, 0, 4, 7]));
+
+//========================================
+// 75.Funksiya massiv qabul qiladi. Ushbu funksiya unga berilgan
+// massiv elementlariga mos o’rinda joylashgan elementlarning
+// turini saqlagan massiv qaytarsin.
+
+// function turlar(arr) {
+//   // code...
+//   let newArr = arr.map((item) => typeof item);
+//   return newArr;
+// }
+
+// let result = turlar([1, 2, "null", []]);
+// console.log(result);
+
+//========================================
+// 76.Funskiya string va number qabul qiladi. Funksiya ushbu
+// stringni berilgan son miqdoricha qayta-qayta yozib natijani
+// string ko’rinishida qaytarsin.
+
+// function qaytarString(str, miqdor) {
+//   return str.repeat(miqdor);
+//   // code...
+// }
+
+// let result = qaytarString("salom", 2);
+// console.log(result);
+
+//===================================================
+// 77.Funksiyaga so’z kiritilsa, agar ushbu so’z ko’plikda bo’lsa
+// funksiya true qaytarsin, aks holda false.
+
+// function koplik(str) {
+//   // code...
+//   return str.endsWith("lar");
+// }
+// console.log(koplik("daraxtlar"));
+
+//=============================
+
+// 78.Funksiya string qabul qiladi. Ushbu funksiya ushbu stringni
+// bosh va oxirgi harflarini birlashtirgan stringni qaytarsin.
+// function boshOxiri(str) {
+//   let soz = str[0] + str[str.length - 1];
+//   return soz;
+//   // code...
+// }
+
+// let result = boshOxiri("salom");
+// console.log(result);
+
+//==================================
+
+// 80.Quyidaga namunani kuzatgan holda funksiya yasang.
+// Namuna:
+// ahvol("happy") ᔍ "Today, I am feeling happy"
+
+// const ahvol = (str1, str2) => {
+//   return str1 + " " + str2;
+// };
+// let str1 = "Today, I am feeling";
+// let str2 = "happy";
+
+// let result = ahvol(str1, str2);
+// console.log(result);
+
+//===================================
+
+// 82.Funskiyaga belgi kiritilsa ushbu belgining ASCII kodini
+// qaytarsin.
+// function ascii(belgi) {
+//   // code...
+
+//   return belgi.charCodeAt();
+// }
+// console.log(ascii("A"));
+
+//============================================
+
+// 83.Funksiyaga 2ta so’z beriladi, anashu 2ta so’z bir-biriga teng
+// bo’lsa true qaytsin, aks holda false. Bunda ikkala so’zining katta
+// yoki kichik harflarda yozilgani ahamiyatsiz deb oling.
+
+// function tengmi(soz1, soz2) {
+//   // code...
+//   if (soz1.toLowerCase() === soz2.toLowerCase()) return true;
+//   else return false;
+// }
+// let str1 = "hello";
+// let str2 = "HeLLo";
+// let result = tengmi(str1, str2);
+// console.log(result);
+
+//==============================================
+// 84.Funksiyaga so’z berilsa, funksiya ushbu so’zining nechta
+// belgidan iborat ekanligini qaytarsin. Bunda string.length
+// propertisizdan foydalanish mumkin emas !!!
+// function findLengthWithoutLength(str) {
+//   let count = 0;
+//   let index = 0;
+
+//   // Har bir belgini topamiz va sanab boramiz
+//   while (str[index] !== undefined) {
+//     count++;
+//     index++;
+//   }
+
+//   return count;
+// }
+
+// // Misol
+// let word = "hello";
+// console.log(findLengthWithoutLength(word)); // 5
+
+// function findLengthWithoutLength(str) {
+//   let count = 0;
+
+//   str.split("").forEach((item) => {
+//     count++;
+//   });
+//   return count;
+// }
+
+// // Misol
+// let word = "hello";
+// console.log(findLengthWithoutLength(word));
+
+//=================================================
+
+// 86.Quyidagi namunani kuzatgan holda funkisya yasang.
+// Namuna:
+// namuna([2, 5, 3]) ᔍ [4, 10, 6]
+
+// const ikkigaOshir = (arr) => {
+//   let newArr = arr.map((item) => item * 2);
+//   return newArr;
+// };
+// let arr = [2, 3, 5];
+// let result = ikkigaOshir(arr);
+// console.log(result);
+
+//=========================================
+// 87.Funksiya so’zlar massivini qabul qiladi. Funksiya ana shu
+// so’zlarning uzunligidan iborat bo’lgan yangi massiv qaytarsin.
+// Namuna:
+// wordLengths(["hello", "world"]) ᔍ [5, 5]
+
+// const wordLengths = (arr) => {
+//   let newArr = arr.map((item) => item.length);
+//   return newArr;
+// };
+// console.log(wordLengths(["hello", "world"]));
+
+//================================================
+
+// 88.Taksi kilometriga 1000 so’mdan haq oladi. Lekin birinchi
+// kilometri 4000 so’m. Agar funksiya taksiga to’langan yakuniy
+// summani qabul qilsa. Funksiya taksining necha kilometr
+// yurganini qaytarsin
+
+// const findKilometrs = (summa) => {
+//   if (summa <= 4000) {
+//     return 1;
+//   } else {
+//     let minimalka = summa - 4000;
+
+//     return minimalka / 1000 + 1;
+//   }
+// };
+
+// let result = findKilometrs(7000);
+// console.log(result);
+
+//==========================================
+// Funksiya matn qabu qilsa, ushbu funksiya ushbu matnda “d”
+// harfi nechi marta ishtirok etganligini qaytarsin. “d” harfining
+// katta kichikligini ahamiyati yo’q.
+
+// const dlar = (soz) => {
+//   let count = 0;
+//   for (let i of soz) {
+//     if (i == "d" || i == "D") count++;
+//   }
+//   return count;
+// };
+
+// let result = dlar("My friend Dylan got distracted in school.");
+// console.log(result);
+
+//===================================
+// 90.Funksiya string qabul qiladi. Va har belgini orasiga bo’sh joy
+// qo’yib qaytarsin.
+
+// const boshJoy = (str) => {
+//   let arr = str
+//     .split("")
+//     .map((item) => item + " ")
+//     .join("");
+//   return arr;
+// };
+// console.log(boshJoy("salom"));
+
+//======================
+
+// 92.Agar men cafedan 3ta kofe olsam yana 1ta tekinga qo’shib
+// berishadi. Funksiya nechta kofe olsam meni qo’limda jami
+// nechta kofe bo’lishini qaytarsin.
+
+// const kofee = (num) => {
+//   let freeCoofee = Math.floor(num / 3);
+//   return freeCoofee + num;
+// };
+// console.log(kofee(10));
+
+//======================================
+
+// 93.Funksiyaga string va son berilsa, ushbu stringning oxirigi
+// belgisini funksiya son marta takrorlab qaytarib bersin.
+
+// function takrorlash(str, num) {
+//   let oxirgiEl = str[str.length - 1];
+//   for (let i = 1; i < num; i++) {
+//     str += oxirgiEl;
+//   }
+//   return str;
+// }
+// console.log(takrorlash("hello", 3));
+
+//==================================
+// 94.Funksiyaga sonlar massivi berilsa, Ana shu massivdagi 5dan
+// katta bo’lgan elementlarni yig’indiisini qaytarsin.
+
+// const calc = (arr) => {
+//   let count = arr
+//     .filter((item) => item > 5)
+//     .reduce((acc, item) => {
+//       return (acc += item);
+//     }, 0);
+//   return count;
+// };
+
+// console.log(calc([1, 5, 20, 30, 4, 9, 18]));
+
+//===========================================
+
+// 95.Funksiyaga massiv berilsa, ushbu funksiya massiv elementlarini barchasini yig’indisini qaytarsin.
+
+// const calcArr = (arr) => {
+//   let newArr = arr.reduce((acc, item) => (acc += item));
+//   console.log(newArr);
+// };
+
+// console.log(calcArr([2, 7, 4]));
+
+//========================================
+
+// 96.Funksiyaga faylning manzili kiritiladi. Funksiya ushbu
+// ma’lumotdan faylining nomi ajratib bersin.
+
+// const getFayl = (str) => {
+//   let arr = str.split("/").at(-1);
+//   return arr;
+// };
+
+// let result = getFayl("C:/Projects/pil_tests/ascii/edabit.txt");
+// console.log(result);
+
+//=============================================
+
+// 97.Doston uyidan masofalar bosib o’tadi. Uyidan yo oldinga
+// yoki orqaga. Bosib o’tilgan masoflar massivi funksiya berilsa,
+// funksiya Doston uyiga qaytishi uchun qancha masofa bosib otishi aytilsin
+
+// const calcMasofa = (arr) => {
+//   let count = arr.reduce((acc, item) => {
+//     return (acc += Math.abs(item));
+//   }, 0);
+
+//   return count;
+// };
+
+// let arr = [-1, -4, -3, -2];
+// let result = calcMasofa(arr);
+// console.log(result);
+
+//========================================
+
+// 98.Funksiya uchburchakning tomonlari argument qilib beriladi.
+// Agar ushbu berilgan tomonlardan uchburchak yasab bo’lsa
+// unda funksiya true qaytarsin, aks holda false. Uchburchakning
+// qoida, istalgan 2ta tomonining yig’igindisi uchunchi tomondan
+// katta bo’lsagina uchburchak hosil bo’ladi.
+
+// const uchburchak = (x, y, z) => {
+//   if (x + y > z || y + z > x || z + x > y) {
+//     return true;
+//   }
+// };
+// console.log(uchburchak(2, 2, 3));
+
+//====================================
+
+// 99.Funksiya 2 son oralig’gini qabul qilsa, ushbu 2ta son
+// orasidagi sonlardan tuzilgan massivni ushbu funksiya
+// qaytarsin.
+
+// const getArr = (num1, num2) => {
+//   let arr = [];
+//   for (let i = num1; i < num2; i++) {
+//     arr.push(i);
+//   }
+//   return arr;
+// };
+// console.log(getArr(2, 9));
+
+// /========================================
+
+// 100.Quyidagi namunani kuzatgan holda funksiya yasang.
+// Namuna:
+// Namuna("div*2") ᔍ "<div></div><div></div>"
+
+// function generateTags(input) {
+//   // Satrni '*' belgisi bo'yicha ikkiga bo'lamiz
+//   let parts = input.split("*");
+//   let tagName = parts[0]; // Teg nomi
+//   let count = parseInt(parts[1]); // Necha marta takrorlash
+
+//   let result = "";
+
+//   // Tegni kerakli miqdorda yaratamiz
+//   for (let i = 0; i < count; i++) {
+//     result += `<${tagName}></${tagName}>`;
+//   }
+
+//   return result;
+// }
+
+// // Misol:
+// console.log(generateTags("div*2")); // "<div></div><div></div>"
+// console.log(generateTags("span*3")); // "<span></span><span></span><span></span>"
+
+//==========================
+
+// 101.Funksiya butun son qabul qilsa, 1dan ushbu butun
+// songacha bo’lgan sonlar yig’indisini qaytarsin.
+
+// const getyigindi = (n) => {
+//   let sum = (n * (n + 1)) / 2;
+//   return sum;
+// };
+
+// console.log(getyigindi(10));
+
+//=======================================
+
+// Funskiya son va object qabul qiladi. Objectni ichida min va
+// max degan propertilar mavjud. Agar ushbu son min va maxni
+// oralig’ida bo’lsa funksiya true qaytarsin, aks holda false
+
+// let minMaxOraligi = (num, obj) => {
+//   return obj.min < num && obj.max > num;
+// };
+
+// let result = minMaxOraligi(4, { min: 0, max: 5 });
+// console.log(result);
+
+//=============================================
+
+// 103.Funksiya son qabul qiladi, agar ushbu sonni kvadratga ko’tarsak, ushbu natijaning oxirigi qiymati sonning o’ziga teng bo’lsa funksiya true qaytarsin, aks holda false.
+// function kvSon(num) {
+//   if (num === num ** 2 % 10) {
+//     return true;
+//   } else return false;
+// }
+// console.log(kvSon(6));
+//====================================
+
+// 104.Funksiya massiv qabul qiladi. Funksiya massivning elementlariga o’sha elementning indexini qo’shgan holda yangi
+// massiv qaytarsin
+
+// let arr = [0, 0, 0, 0, 0, 0, 0];
+// let newArr = arr.map((item, index) => {
+//   return item + index;
+// });
+
+// console.log(newArr);
+
+//==============================
+
+// 105.Funksiya ichimliklar massivini qabul qiladi. Funksiya
+// ichida shakari yo’q ichimlilarinigina qaytarishi kerak. Ichida
+// shakari bor ichimliklar ro’yxati:
+// cola
+// fanta
+
+// const getShakarli = (arr, shakarli) => {
+//   let newArr = arr.filter((item) => {
+//     return item != shakarli[0] && item != shakarli[1];
+//   });
+//   return newArr;
+// };
+// let arr = ["fanta", "cola", "water"],
+//   shakarli = ["cola", "fanta"];
+// console.log(getShakarli(arr, shakarli));
+
+//=============================
+
+// .Funksiya son qabul qilsa, Funksiya ushbu sonda nechta
+// raqam borligini qaytarsin.
+
+// const getLength = (num) => {
+//   return num.toString().length;
+// };
+
+// console.log(getLength(123456));
+
+//============================
+
+// 107.Funksiya son qabu qilsa, ushbu funksiya sonning raqamlari
+// o’rni istalgancha almashtirib eng katta hosil bo’lishi mumkin
+// bo’lgan sonni qaytarsin.
+
+// function kattaSon(num) {
+//   let arr = num
+//     .toString()
+//     .split("")
+//     .sort((a, b) => b - a)
+//     .join("");
+//   return Number(arr);
+// }
+
+// console.log(kattaSon(1902));
+
+//============================================
+
+// 108.Funksiya 2ta sonlar oralig’ini qabul qiladi. Funksiya ushbu
+// oraliqdan bironta random son qaytarsin.
+
+// function randomNum(num1, num2) {
+//   return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
+// }
+// console.log(randomNum(2, 6));
+
+//========================================
+
+// / 109.Funksiya son qabul qiladi. Ushbu funksiya ushbu son narissistik son bo’lsa true qaytarsin, aks holda false. Narissistik son degani sonning har bir raqamini sonning uzunligi miqdorida darajaga ko’tarib qo’shib chiqilganda o’ziga teng bo’lgan son.
+// function narisistik(num) {
+//   let strNum = String(num);
+//   let sum = 0;
+//   for (let i = 0; i < strNum.length; i++) {
+//     sum += strNum[i] ** strNum.length;
+//   }
+//   if (sum === num) {
+//     return true;
+//   } else return false;
+// }
+// let num = 153;
+// let result = narisistik(num);
+// console.log(result);
+
+//========================================
+
+// 110.Funksiya string qabul qiladi.Funksiya ushbu stringda nechta katta harf ishtirok etganin qaytarsin.
+// Namuna:
+// function kattaHarfSoni(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     let letter = str.charAt(i);
+//     if (letter === letter.toUpperCase() && letter !== letter.toLowerCase()) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// let str = "TFDTUYFsdiajsof;hj;oid";
+// let count = kattaHarfSoni(str);
+// console.log(count);
