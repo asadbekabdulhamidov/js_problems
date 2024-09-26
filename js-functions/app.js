@@ -946,6 +946,512 @@
 // console.log(result);
 
 //======================================
+// 1-masala foydalanuvchi kiritgan Ihtiyoriy sonning 3 -darajasini
+//hisoblovchi funksiya hosil qiling va natijani consolda chiqaring
+
+// function calcCub(num) {
+//   return num ** 3;
+// }
+// let result = calcCub(3);
+// console.log(result);
+
+//================================
+
+// 2-masala foydalanuvchi kiritgan Ihtiyoriy sonning 2, 3, 4
+//-darajasini hisoblovchi funksiya hosil qiling va natijani
+//consolda chiqaring
+
+// function calcPow(num) {
+//   let kv = num ** 2;
+//   let cub = num ** 3;
+//   let pow4 = num ** 4;
+//   return [kv, cub, pow4];
+// }
+// let result = calcPow(3);
+// console.log(result);
+
+// 3-masala ikkita sonning o`rta arifmetigin hisoblovchi
+//funksiya hosil qiling va natijani consolda chiqaring
+
+// let ortaArifmetik = function (num1, num2) {
+//   let orta = Math.floor((num1 + num2) / 2);
+//   return orta;
+// };
+
+// let result = ortaArifmetik(3, 5);
+// console.log(result);
+//===================================================
+
+// 4-masala Teng tomonli uch burchakning yuzasi va perimetrini
+// hisoblovchi  funksiya
+// hosil qiling va natijani consolda chiqaring
+
+// let uchburchakYuziPerimetri = (tomon1, tomon2, tomon3) => {
+//   let p = tomon1 + tomon2 + tomon3;
+//   let yarimPer = p / 2;
+//   let s = Math.sqrt(
+//     yarimPer * (yarimPer - tomon1) * (yarimPer - tomon2) * (yarimPer - tomon3)
+//   );
+//   return { perimetr: p, yuzasi: s };
+// };
+// let result = uchburchakYuziPerimetri(3, 3, 3);
+// console.log(result);
+
+//=====================================
+
+// 5-masala to'g'ri to'riburchakning yuzini va perimetrini
+//hisoblovchi funksiya hosil qiling va natijani consolga chiqaring
+
+// let tortBUrchakYuziPer = (a, b) => {
+//   let p = (a + b) * 2;
+//   let s = a * b;
+
+//   return [p, s];
+// };
+
+// let result = tortBUrchakYuziPer(10, 20);
+// console.log(result);
+
+//==================================
+
+// 6-masala ikkita sonning qiymatini almashtiruvchi
+//Swap nomli funksiya hosil qiling va natijani consolga chiqaring.
+
+// function swap(num1, num2) {
+//   let temp = num1;
+//   num1 = num2;
+//   num2 = temp;
+//   return [num1, num2];
+// }
+
+// let result = swap(3, 6);
+// console.log(result);
+
+// 7-masala   X va Y sonlaridan kichigini X ga va kattasini Y ga
+//yozuvchi Minmax(X, Y) funksiyasini
+// hosil qiling va natijani consolga chiqaring
+
+// function MinMAx(x, y) {
+//   if (x < y) {
+//     return { x, y };
+//   } else {
+//     let temp = x;
+//     x = y;
+//     x = temp;
+
+//     return [x, y];
+//   }
+// }
+
+// let result = MinMAx(9, 4);
+// console.log(result);
+
+//=========================================
+
+// 8-masala foydalanuvchidan ketma ket olingan 3 ta  sonlarni
+// o'sish tartibida joylashtiruvchi Sort funksiyasini hosil
+// qiling. Ya'ni A, B, C sonlari qiymatlarini shunday almashtiringki, natijada A ning qiymati eng kichik va C ning qiymati eng katta bo'lsin.
+
+// let sort = (a, b, c) => {
+//   let arr = [a, b, c];
+//   let sortedArr = arr.sort((a, b) => {
+//     return a - b;
+//   });
+
+//   return sortedArr;
+// };
+
+// let result = sort(6, 4, 7);
+// console.log(result);
+
+//=================================================
+
+// 9-masala  A, B, C sonlarini kamayish tartibida joylashtiruvchi  funksiya hosil
+// qiling. Ya'ni A, B, C sonlari qiymatlarini shunday
+//almashtiringki, natijada A ning qiymati eng katta va С
+// ning qiymati eng kichik bo'lsin.
+
+// let sort = (a, b, c) => {
+//   let arr = [a, b, c];
+//   let sortedArr = arr.sort((a, b) => {
+//     return b - a;
+//   });
+
+//   return sortedArr;
+// };
+
+// let result = sort(6, 4, 7);
+// console.log(result);
+
+//==================================================
+// 10-masala  Chapga siklik siljishni amalga oshiruvchi funksiya hosil qiling.
+// Ya'ni C ning qiymati B ga, B ning qiymati A ga, A ning
+//qiymati C ga o'tib qolsin va natija consolga chiqarilsin
+
+// function sikl(a, b, c) {
+//   let temp = a;
+//   a = c;
+//   c = b;
+//   b = temp;
+//   console.log(a, b, c);
+// }
+
+// 11- masala Haqiqiy sonning ishorasini aniqlovchi
+// ishora nomli funksiya hosil qiling.Funksiya
+// argumenti noldan kichik bo'lsa -1;
+// noldan katta bo'lsa 1;
+// nolga teng bo'lsa 0 qiymat qaytarsin.
+
+// let ishora = (num) => {
+//   if (num < 0) return -1;
+//   else if (num > 0) return 1;
+//   else return 0;
+// };
+
+// console.log(ishora(-4));
+
+//=================================
+
+// 12-masala Doiraning yuzini hisoblovchi funksiya hosil qiling.
+
+// let doiraYuzi = (r) => {
+//   let PI = 3.14;
+//   let S = PI * r ** 2;
+//   return S;
+// };
+
+// console.log(doiraYuzi(10));
+
+//===============================
+
+// 13-masala O'ngga siklik siljishni amalga oshiruvchi  funksiyasini hosil qiling.
+// Ya'ni A ning qiymati B ga, В ning qiymati C ga, C ning qiymati A ga o'tib qolsin.
+
+// let sikl = function (a, b, c) {
+//   let temp = c;
+//   c = b;
+//   b = a;
+//   a = temp;
+//   console.log(a, b, c);
+// };
+
+// sikl(1, 2, 3);
+
+// 14-masala Butun sonning juft — toqligini aniqlovchi Even(K) funksiyasini hosil qiling. Funksiya K juft
+// son bo'lsa - true, aks xolda false qiymat qaytarsin. Bu funksiya orqali 3 ta sonning juft yoki toqligi
+// aniqlansin.
+
+// let Even = (k) => {
+//   if (k % 2 == 0) return true;
+//   else return false;
+// };
+
+// console.log(Even(-2));
+
+//==========================================
+
+// 15) shunday funksiya yaratingki funksiya parametri
+//sifatida jo'natilgan ikkita har xil sonni o'rta arifmetigi
+//va o'rta geometrigi yog'indisini konsolga chiqarsin
+
+// let calc = (x, y) => {
+//   let ortaArif = (x + y) / 2;
+//   let ortaGeometrik = Math.sqrt(x * y);
+//   return { ortaArif, ortaGeometrik };
+// };
+
+// let result = calc(5, 5);
+// console.log(result);
+
+//==========================================
+
+// 16) shunday funksiya yaratingki parametr sifatida
+// jio'natilgan sonni 3-darajasi ya'ni kubini consolega chiqarsini
+
+// let calcNum = (num) => {
+//   return Math.pow(num, 3);
+// };
+
+// console.log(calcNum(3));
+
+//==============================================
+
+// 17)  shunday funksiya yaratingki mevalar nomidan tashkil
+// topgan array ichidan length yani uzunligi funcsiya parametri
+//sifatida jo'natilgan sondan  kattalarini filter qilib bersin.
+
+// function getName(arr, n) {
+//   let newArr = arr.filter((item) => item.length > n);
+//   return newArr;
+// }
+// let result = getName(["olma", "anor", "banana", "nok"], 3);
+// console.log(result);
+
+// HOMEWORK
+
+// 1.Funksiya qabul qilingan satrda har bir so'zning
+//birinchi harfini katta qilib consolega chiqaring
+
+// let kattaHarf = (str) => {
+//   let arr = str.split(" ");
+//   let newStr = arr.map((item) => {
+//     return item.charAt(0).toUpperCase() + item.slice(1);
+//   });
+
+//   return newStr;
+// };
+// let result = kattaHarf("salom men frontend dasturchi");
+// console.log(result);
+
+//==================================
+
+// 2.Funksiyaga jo'natilgan sonlar massivining
+// har bir elementini kvadratga oshiradigan funksiya yozing.
+// let kvElement = (arr) => {
+//   let newArr = arr.map((item) => item ** 2);
+//   return newArr;
+// };
+// let arr = [1, 2, 3, 4, 5, 6];
+// let result = kvElement(arr);
+// console.log(result);
+
+//=========================================
+
+// 3. Massivni teskari aylantirish
+// Berilgan massivni teskari qilib qaytaradigan funksiya yozing.
+
+// let teskariMassiv = function (arr) {
+//   return arr.reverse();
+// };
+
+// let result = teskariMassiv([1, 2, 3, 4]);
+// console.log(result);
+
+//==========================================
+// 4. Katta va kichik harflarni almashtirish
+// Berilgan satrda har bir harfni katta yoki kichik harfga almashtiradigan funksiya yozing.
+
+// 5.Berilgan sonlar massivida eng katta va eng kichik
+//sonni topadigan funksiya yozing.
+
+// let minMax = (arr) => {
+//   let minItem = Math.min(...arr);
+//   let maxItem = Math.max(...arr);
+
+//   return { minItem, maxItem };
+// };
+
+// let result = minMax([1, 3, 4, 5, 8]);
+// console.log(result);
+
+//=================================================
+
+// 6.Satr va harf qabul qiladigan funksiya yarating
+//Berilgan satrda o'sha harf necha marta takrorlanganini
+//aniqlasin.
+
+// let harfCount = (str, harf) => {
+//   let count = 0;
+//   for (let i of str) {
+//     i == harf ? count++ : (count += 0);
+//   }
+//   return count;
+// };
+
+// let result = harfCount("salom men Asadbek Abdulhamidov", "a");
+// console.log(result);
+
+//===============================
+
+// 7. Berilgan sonlar massivida faqat juft sonlarni
+//qaytaradigan funksiya yozing.
+
+// let oddNumber = (arr) => {
+//   let oddArr = arr.filter((item) => item % 2 == 0);
+//   return oddArr;
+// };
+// let result = oddNumber([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+// console.log(result);
+
+//====================================
+
+// 8. Massivdagi stringlarni uzunligi bo'yicha saralash
+
+// let strArr = ["javascript", "python", "java", "ruby", "react"];
+
+// let strUzunligi = (arr) => {
+//   let newArr = arr.sort((a, b) => a.length - b.length);
+//   return newArr;
+// };
+// let result = strUzunligi(strArr);
+
+// console.log(result);
+
+//============================
+
+// Berilgan satrlar massivini so'z uzunligi bo'yicha o'sish tartibida saralovchi funksiya yozing.
+// Ps: sort() va length methodlaridan foydalaning.
+
+// let strArr = ["javascript", "python", "java", "ruby", "react"];
+
+// let strUzunligi = (arr) => {
+//   let newArr = arr.sort((a, b) => b.length - a.length);
+//   return newArr;
+// };
+// let result = strUzunligi(strArr);
+
+// console.log(result);
+
+//========================================
+// 9. Berilgan satrning birinchi va oxirgi belgisini
+//almashtiradigan funksiya yozing.
+
+// let str = "salom";
+
+// let almashtirish = (str) => {
+//   let firstEl = str[0];
+//   let lastEl = str[str.length - 1];
+//   let middleEls = str.slice(1, -1);
+//   return lastEl + middleEls + firstEl;
+// };
+
+// let result = almashtirish(str);
+// console.log(result);
+
+//===================================
+
+// 10. Ikkita massivning umumiy elementlarini qaytaradigan
+// funksiya yozing.
+
+// let umumiyArr = (arr1, arr2) => {
+//   return arr1.concat(arr2);
+// };
+
+// let arr1 = [1, 2, 3, 4, 5],
+//   arr2 = [6, 7, 8, 9, 10];
+// let result = umumiyArr(arr1, arr2);
+// console.log(result);
+
+//===================================
+
+// 11. Sonlar massivini o'sish bo'yicha saralash
+// Berilgan sonlar massivini o'sish tartibida
+//saralaydigan funksiya yozing.
+
+// let osishTartibi = (arr) => {
+//   let newArr = arr.sort((a, b) => a - b);
+//   return newArr;
+// };
+
+// let arr = [5, 2, 9, 1, 7];
+// let result = osishTartibi(arr);
+// console.log(result);
+
+//===========================================
+
+// 12. Massiv elementlarini birlashtirish
+// Berilgan satrlar massivini yagona satrga birlashtiradigan funksiya yozing.
+// Ps: join() metodidan foydalaning.
+
+// let strBirlashtirish = (arr) => {
+//   let str = arr.join("");
+//   return str;
+// };
+// let arr = [
+//   "s",
+//   "a",
+//   "l",
+//   "o",
+//   "m",
+//   " ",
+//   "m",
+//   "e",
+//   "n",
+//   " ",
+//   "j",
+//   "s",
+//   " ",
+//   "m",
+//   "a",
+//   "s",
+//   "t",
+//   "e",
+//   "r",
+// ];
+// let result = strBirlashtirish(arr);
+// console.log(result);
+
+// /==================================
+
+// 13. Massiv ichida aniq qiymat borligini tekshirish
+// Berilgan qiymat massivda bor yoki yo'qligini aniqlaydigan funksiya yozing.
+
+// const includEl = (arr, item) => {
+//   return arr.includes(item);
+// };
+
+// let arr = [1, 3, 4, 5, 6, 6];
+// let result = includEl(arr, 3);
+// console.log(result);
+
+//=====================================
+// 14. Massiv ichidagi unikal elementlarni topish
+// Berilgan massiv ichida faqat takrorlanmagan elementlarni qaytaradigan funksiya yozing.
+
+// const unikalArr = (arr) => {
+//   return arr.filter(
+//     (item, index) => arr.indexOf(item) === arr.lastIndexOf(item)
+//   );
+// };
+
+// let arr = [1, 2, 2, 3, 4, 4, 5, 6, 7, 7];
+// let result = unikalArr(arr);
+// console.log(result);
+
+//=========================================
+
+// 15. Massivdagi juft sonlar sonini sanash
+// Berilgan massiv ichida nechta juft son borligini aniqlaydigan funksiya yozing.
+
+// const oddNumberCount = (arr) => {
+//   let count = 0;
+//   arr.forEach((item) => {
+//     if (item % 2 == 0) count++;
+//   });
+
+//   return count;
+// };
+// let arr = [1, 2, 2, 3, 4, 4, 5, 6, 7, 7];
+// let result = oddNumberCount(arr);
+// console.log(result);
+
+//====================================
+
+// 16. Birinchi harfini olib tashlash
+// Berilgan satrdagi birinchi harfni olib tashlaydigan
+// funksiya yozing.
+
+// const birinchiHarf = (str) => {
+//   return str.slice(1);
+// };
+
+// let result = birinchiHarf("codial");
+// console.log(result);
+
+//=======================================
+
+// 17. So'zlarni teskari tartibda chiqarish
+// Berilgan satrni so'zlar teskari tartibda bo'lgan
+// holatda qaytaradigan funksiya yozing.
+
+// const teskari = (str) => {
+//   return str.split(" ").reverse().join(" ");
+// };
+// let str = "salom men codial talabasiman";
+// let result = teskari(str);
+// console.log(result);
+
+//=====================================
 
 // .Funksiya son1, son2 va massiv qabul qiladi. Funksiya ushbu
 // massivni ichidan son1dan katta va son2dan kichik sonlarni
