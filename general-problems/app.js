@@ -156,3 +156,155 @@
 
 // let res = flatten(arr);
 // console.log(res);
+
+//=============================================
+// Array ichidagi eng katta sonni topish:
+
+// function findMax(arr) {
+//   // Array ichidagi eng katta sonni toping
+//   return Math.max(...arr);
+// }
+// let arr = [1, 2, 3, 10, 5];
+// console.log(findMax(arr)); // 10
+
+//===================================
+// Faqat musbat sonlarni yig'indisini toping
+
+// function sumPositiveNumbers(arr) {
+//   let count = 0;
+//   arr.forEach((element) => {
+//     if (element > 0) count += element;
+//   });
+//   return count;
+// }
+// let arr = [-1, 2, 3, -4, 5];
+// console.log(sumPositiveNumbers(arr)); // 10
+
+//================================================
+// Stringning faqat birinchi harfini katta qiling
+
+// function capitalizeFirstLetter(str) {
+//   return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+// console.log(capitalizeFirstLetter("javascript")); // "Javascript"
+
+//===========================================
+// Har bir elementni kvadratga oshiring va array qaytaring
+
+// function squareNumbers(arr) {
+//   let kvArr = arr.map((item) => item ** 2);
+//   return kvArr;
+// }
+// console.log(squareNumbers([1, 2, 3, 4])); // [1, 4, 9, 16]
+
+//================================================
+// min va max oralig'ida tasodifiy son qaytaring
+// function getRandomNumber(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+// console.log(getRandomNumber(1, 100)); // Masalan: 56
+// console.log(getRandomNumber(1, 100)); // Masalan: 56
+// console.log(getRandomNumber(1, 100)); // Masalan: 56
+
+//==========================================
+// Takrorlanayotgan harflarni olib tashlang
+
+// function removeDuplicates(str) {
+//   return [...new Set(str)].join("");
+// }
+// console.log(removeDuplicates("hello")); // "helo"
+
+//==============================================
+// Stringni palindrome yoki yo'qligini tekshiring
+
+// function isPalindrome(str) {
+//   let left = 0;
+//   let right = str.length - 1;
+
+//   while (left < right) {
+//     if (str[left] !== str[right]) return false;
+//     left++;
+//     right--;
+//   }
+//   return true;
+// }
+// console.log(isPalindrome("madam")); // true
+// console.log(isPalindrome("hello")); // false
+
+//==================================================
+// Class yordamida avtoulov yaratish:
+// class Car {
+//   constructor(make, model, year) {
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//   }
+
+//   getCarInfo() {
+//     // Avtoulov haqida to'liq ma'lumot qaytaring
+//     return `nomi:${this.make}, modeli:${this.model},  yili:${this.year} `;
+//   }
+// }
+// const myCar = new Car("Toyota", "Camry", 2022);
+// console.log(myCar.getCarInfo()); // "Toyota Camry, 2022"
+
+//====================================
+// Arraydagi sonlarni o'sish tartibida qaytaring
+
+// function sortNumbers(arr) {
+//   return arr.sort((a, b) => a - b);
+// }
+// console.log(sortNumbers([3, 1, 4, 2])); // [1, 2, 3, 4]
+
+//======================================
+// n gacha bo'lgan Fibonacci ketma-ketligini qaytaring
+
+// function fibonacci(n) {
+//   const fib = [0, 1];
+//   for (let i = 2; i < n; i++) {
+//     fib[i] = fib[i - 1] + fib[i - 2];
+//   }
+//   return fib;
+// }
+// console.log(fibonacci(5)); // [0, 1, 1, 2, 3]
+
+//==========================================
+// Array ichidagi eng uzun stringni qaytaring
+// function longestString(arr) {
+//   let longest = "";
+
+//   for (let str of arr) {
+//     if (str.length > longest.length) {
+//       longest = str;
+//     }
+//   }
+
+//   return longest;
+// }
+// console.log(longestString(["apple", "banana", "pear"]));
+
+// "banana"
+
+// class longeStr {
+//   constructor(arr) {
+//     this.arr = arr;
+//   }
+//   fnk1() {
+//     let longest = "";
+
+//     for (let str of this.arr) {
+//       if (str.length > longest.length) {
+//         longest = str;
+//       }
+//     }
+
+//     return longest;
+//   }
+//   fnk2() {
+//     this.arr.sort((a, b) => a.length - b.length);
+//     return this.arr[this.arr.length - 1];
+//   }
+// }
+
+// let str1 = new longeStr(["apple", "banana", "pear"]);
+// console.log(str1.fnk1());
