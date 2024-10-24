@@ -308,3 +308,160 @@
 
 // let str1 = new longeStr(["apple", "banana", "pear"]);
 // console.log(str1.fnk1());
+
+//=========================================
+
+// 1. **Fibonacci Sequence**:
+//    - Foydalanuvchi kiritgan sonigacha bo'lgan Fibonacci ketma-ketligini qaytaring.
+
+// 2. **Unique Elements**:
+//    - Berilgan massivdan faqat noyob elementlarni ajratib oling.
+// function getUniqueElements(arr) {
+//     return [...new Set(arr)]; // Set yordamida noyob elementlar yaratiladi va yangi massivga o'tkaziladi
+// }
+
+// // Misol:
+// let array = [1, 2, 2, 3, 4, 4, 5];
+// console.log(getUniqueElements(array)); // Natija: [1, 2, 3, 4, 5]
+
+// 3. **Character Occurrence**:
+//    - Berilgan matnda har bir belgining nechta marta ishlatilganini hisoblab chiqing.
+// function CharacterCount(str) {
+//   let obj = {};
+
+//   for (let char of str) {
+//     if (obj[char]) obj[char]++;
+//     else obj[char] = 1;
+//   }
+//   return obj;
+// }
+
+// let str = "hello world";
+// let res = CharacterCount(str);
+// console.log(res);
+
+//==============================
+
+// 4. **Palindrome Checker**:
+//    - Matn palindrome ekanligini tekshiring
+//(teskari o'qilganda ham bir xil bo'lishi kerak).
+
+// const polindrome = (str) => {
+//   let left = 0;
+//   let right = str.length - 1;
+
+//   while (left < right) {
+//     if (str[left] !== str[right]) return false;
+//     left++;
+//     right--;
+//   }
+//   return true;
+// };
+// let str = "level";
+// let res = polindrome(str);
+// console.log(res);
+
+//================================
+
+// 5. **Sum of Primes**:
+//    - 1 dan foydalanuvchi kiritgan songacha bo'lgan
+//barcha tub sonlarning yig'indisini hisoblang.
+
+// function isPrime(num) {
+//   if (num < 2) return false;
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) return false;
+//   }
+//   return true;
+// }
+
+// function sumOfPrimes(limit) {
+//   let sum = 0;
+//   for (let i = 2; i <= limit; i++) {
+//     if (isPrime(i)) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// // Misol:
+// let userInput = 10; // Foydalanuvchi kiritgan son
+// console.log(sumOfPrimes(userInput)); // Natija: 17 (2 + 3 + 5 + 7)
+
+//==================================================
+// 6. **Longest Word**:
+//    - Berilgan matndagi eng uzun so'zni toping.
+
+// let longestWord = (str) => {
+//   let words = str.split(" ");
+
+//   let arr = words.sort((a, b) => {
+//     return a.length - b.length;
+//   });
+//   return arr[arr.length - 1];
+// };
+
+// let res = longestWord("JavaScript is a versatile programming language");
+// console.log(res);
+
+// 7. **Array Rotation**:
+//    - Berilgan massivni kiritilgan qiymat bo'yicha
+// chapga yoki o'ngga aylantiring.
+
+// let array = [1, 2, 3, 4, 5];
+
+// function rotation(arr) {
+//   let newArr = arr.slice(0, 3);
+//   let arr2 = arr.slice(3, arr.length);
+//   return arr2.concat(newArr);
+// }
+
+// let res = rotation(array);
+// console.log(res);
+
+// 8. **Flatten Array**:
+//    - Ichma-ich massivdan (nested array) oddiy
+//massiv yarating.
+
+// function flatten(arr) {
+//   return arr.flat(Infinity);
+// }
+
+// let arr = [
+//   [1, 2, 3],
+//   [4, 5],
+//   [6, 7, 8, 9],
+// ];
+// let res = flatten(arr);
+// console.log(res);
+
+// 9. **Vowel Counter**:
+//    - Foydalanuvchi kiritgan matnda nechta unli
+//harf borligini hisoblang.
+
+// function vowelCounter(str) {
+//   let vowel = ["a", "e", "i", "o", "u"];
+//   let counter = 0;
+//   let arr = str.split("").forEach((item) => {
+//     if (vowel.includes(item)) counter++;
+//   });
+
+//   return counter;
+// }
+// let str = `salom men codial talabasiman`;
+// let res = vowelCounter(str);
+// console.log(res);
+
+// /======================
+
+// 10. **Random Element Picker**:
+//    - Massivdan tasodifiy elementni qaytaring.
+
+// function randomItem(arr) {
+//   const randomIndex = Math.floor(Math.random() * arr.length);
+//   return arr[randomIndex];
+// }
+// let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let res = randomItem(array);
+// console.log(res);
